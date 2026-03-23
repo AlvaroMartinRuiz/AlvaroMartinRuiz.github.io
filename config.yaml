@@ -18,3 +18,4 @@ params:
     - item: about_me
       expand: true 
     - item: projects
+    - item: blog

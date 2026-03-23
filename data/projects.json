@@ -1,11 +1,42 @@
 {
   "title": "Projects",
   "icon": "bi bi-kanban",
+  "url": "https://github.com/AlvaroMartinRuiz?tab=repositories",
   "list": [
     {
-      "title": "My First Project",
-      "url": "https://github.com/",
-      "description": "A showcase of my recent work."
+      "title": "Predicting Heart Disease",
+      "url": "https://github.com/AlvaroMartinRuiz/predicting_heart_disease",
+      "description": "This project aimed to predict heart failure using 11 cardiovascular-related features."
+    },
+    {
+      "title": "Reinforcement Learning Pacman",
+      "url": "https://github.com/AlvaroMartinRuiz/reinforcement_learning_pacman",
+      "description": "Trained a Pac-Man agent using reinforcement learning techniques to play autonomously and maximize its score through self-play and strategic decision-making."
+    },
+    {
+      "title": "Country Development & Economic Freedom",
+      "url": "https://github.com/AlvaroMartinRuiz/Country_Development_and_Economic_Freedom",
+      "description": "Analyzed how economic freedom impacts a country's development using extensive preprocessing, EDA, and algorithms such as PCA, FA, and clustering."
+    },
+    {
+      "title": "Delta Hedging MSCI World",
+      "url": "https://github.com/AlvaroMartinRuiz/delta_hedging_MSCI_world",
+      "description": "Analyzed European options for arbitrage opportunities via Black-Scholes and developed a delta hedging strategy for the MSCI World Index."
+    },
+    {
+      "title": "Super Mario Bros",
+      "url": "https://github.com/AlvaroMartinRuiz/super_mario_bross",
+      "description": "Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering."
+    },
+    {
+      "title": "Titanic Survival Predictions",
+      "url": "https://github.com/AlvaroMartinRuiz/titanic_survival_predictions",
+      "description": "Applied decision trees and random forests in R to predict Titanic survival, accompanied by exploratory data analysis reports."
+    },
+    {
+      "title": "Excel Dashboard Titanic",
+      "url": "https://github.com/AlvaroMartinRuiz/excel_dashboard_titanic",
+      "description": "Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities."
     }
   ]
 }

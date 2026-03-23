@@ -13,7 +13,7 @@
       <link>//localhost:1313/blog/first-post/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0100</pubDate>
       <guid>//localhost:1313/blog/first-post/</guid>
-      <description>&lt;p&gt;This is my very first blog post on my new developer portfolio. Built with Hugo and the Aafu theme!&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is my very first blog post on my new developer portfolio. Built with Hugo and the Aafu theme!&lt;/p&gt;&#xA;&lt;p&gt;Here is the latest version of my research.&lt;/p&gt;&#xA;&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;In this paper, we explore the fundamentals of Brownian Motion, its mathematical properties, and how it can be modeled. The document acts as an in-depth dive into stochastic processes.&lt;/p&gt;&#xA;&lt;div class=&#34;pdf-container my-4&#34; style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;object data=&#34;/papers/Understanding_Brownian_Motion.pdf&#34; type=&#34;application/pdf&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border: 1px solid #ccc; border-radius: 8px;&#34;&gt;&#xA;    &lt;p&gt;Your browser does not support PDFs. &#xA;      &lt;a href=&#34;//localhost:1313/papers/Understanding_Brownian_Motion.pdf&#34; class=&#34;text-blue-500 hover:underline&#34;&gt;Download the PDF&lt;/a&gt;.&#xA;    &lt;/p&gt;</description>
     </item>
     <item>
       <title>Demo Page</title>

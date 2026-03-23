@@ -1,0 +1,15 @@
+<ul class="list-disc ml-6 mt-2">
+  {{ range where .Site.RegularPages "Section" "blog" }}
+  <li class="mb-2">
+    <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline dark:text-blue-400">
+      {{ .Title }}
+    </a>
+    <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">
+      {{ .Date.Format "Jan 2, 2006" }}
+    </span>
+    {{ if .Summary }}
+    <p class="text-sm mt-1 text-gray-700 dark:text-gray-300">{{ .Summary | plainify | truncate 100 }}</p>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>

@@ -1,0 +1,12 @@
+<div class="pdf-container my-4" style="text-align: center;">
+  <object data="{{ .Get "src" }}" type="application/pdf" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 8px;">
+    <p>Your browser does not support PDFs. 
+      <a href="{{ .Get "src" }}" class="text-blue-500 hover:underline">Download the PDF</a>.
+    </p>
+  </object>
+  <div class="mt-2">
+    <a href="{{ .Get "src" }}" download class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+      <i class="bi bi-download mr-2"></i> Download PDF
+    </a>
+  </div>
+</div>
