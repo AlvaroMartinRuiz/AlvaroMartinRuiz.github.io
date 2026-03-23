@@ -5,3 +5,5 @@ draft: false
 ---
 
 This is my very first blog post on my new developer portfolio. Built with Hugo and the Aafu theme!
+
+Here is the latest version of my research. You can [download the PDF here](/papers/Understanding_Brownian_Motion.pdf).
