@@ -37,6 +37,26 @@
       "title": "Excel Dashboard Titanic",
       "url": "https://github.com/AlvaroMartinRuiz/excel_dashboard_titanic",
       "description": "Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities."
+    },
+    {
+      "title": "Cooking Recipes Platform",
+      "url": "https://github.com/AlvaroMartinRuiz/Cooking_recipes_2023",
+      "description": "A full-stack web application built with Flask and SQLAlchemy that allows users to discover, share, and interact with cooking recipes."
+    },
+    {
+      "title": "Skill Gap Analysis",
+      "url": "https://github.com/skill-gap-dev/skill_gap_analysis",
+      "description": "A career-analytics platform that identifies the gap between a candidate's current skill set and the requirements of their target roles using NLP and graph-based analytics."
+    },
+    {
+      "title": "News Fake Detection & Clustering",
+      "url": "https://github.com/carolinalopezdelamadriz/MLA_FinalProject2025",
+      "description": "A machine learning project exploring if the authenticity of news articles can be determined using only textual content through NLP, classification models, and clustering."
+    },
+    {
+      "title": "The Poop App",
+      "url": "https://github.com/carlosfya/PoopApp",
+      "description": "An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues."
     }
   ]
 }
