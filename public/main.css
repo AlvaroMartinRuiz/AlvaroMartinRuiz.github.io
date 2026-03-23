@@ -670,8 +670,14 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4) !important;
   }
+  .mr-1 {
+    margin-right: calc(var(--spacing) * 1) !important;
+  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2) !important;
+  }
+  .mr-3 {
+    margin-right: calc(var(--spacing) * 3) !important;
   }
   .mr-4 {
     margin-right: calc(var(--spacing) * 4) !important;
@@ -721,6 +727,9 @@
   .inline {
     display: inline !important;
   }
+  .inline-block {
+    display: inline-block !important;
+  }
   .table {
     display: table !important;
   }
@@ -741,6 +750,9 @@
   }
   .max-w-none {
     max-width: none !important;
+  }
+  .flex-grow {
+    flex-grow: 1 !important;
   }
   .grow {
     flex-grow: 1 !important;
@@ -894,6 +906,10 @@
     font-size: var(--text-xs) !important;
     line-height: var(--tw-leading, var(--text-xs--line-height)) !important;
   }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold) !important;
+    font-weight: var(--font-weight-semibold) !important;
+  }
   .text-blue-500 {
     color: var(--color-blue-500) !important;
   }
@@ -999,6 +1015,20 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-400) !important;
+      }
+    }
+  }
+  .hover\:text-blue-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-500) !important;
+      }
+    }
+  }
+  .hover\:text-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-600) !important;
       }
     }
   }
@@ -1503,6 +1533,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1621,10 +1655,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1634,6 +1664,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-font-weight: initial;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
@@ -1661,7 +1692,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-font-weight: initial;
     }
   }
 }

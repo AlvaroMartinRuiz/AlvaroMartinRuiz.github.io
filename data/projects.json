@@ -1,62 +1,84 @@
 {
   "title": "Projects",
   "icon": "bi bi-kanban",
-  "url": "https://github.com/AlvaroMartinRuiz?tab=repositories",
+  "url": "/projects/",
   "list": [
     {
       "title": "Predicting Heart Disease",
       "url": "https://github.com/AlvaroMartinRuiz/predicting_heart_disease",
-      "description": "This project aimed to predict heart failure using 11 cardiovascular-related features."
+      "description": "This project aimed to predict heart failure using 11 cardiovascular-related features.",
+      "date": "2024-05",
+      "category": "Machine Learning & AI"
     },
     {
       "title": "Reinforcement Learning Pacman",
       "url": "https://github.com/AlvaroMartinRuiz/reinforcement_learning_pacman",
-      "description": "Trained a Pac-Man agent using reinforcement learning techniques to play autonomously and maximize its score through self-play and strategic decision-making."
+      "description": "Trained a Pac-Man agent using reinforcement learning techniques to play autonomously and maximize its score through self-play and strategic decision-making.",
+      "date": "2024-12",
+      "category": "Machine Learning & AI"
     },
     {
       "title": "Country Development & Economic Freedom",
       "url": "https://github.com/AlvaroMartinRuiz/Country_Development_and_Economic_Freedom",
-      "description": "Analyzed how economic freedom impacts a country's development using extensive preprocessing, EDA, and algorithms such as PCA, FA, and clustering."
+      "description": "Analyzed how economic freedom impacts a country's development using extensive preprocessing, EDA, and algorithms such as PCA, FA, and clustering.",
+      "date": "2024-01",
+      "category": "Machine Learning & AI"
     },
     {
       "title": "Delta Hedging MSCI World",
       "url": "https://github.com/AlvaroMartinRuiz/delta_hedging_MSCI_world",
-      "description": "Analyzed European options for arbitrage opportunities via Black-Scholes and developed a delta hedging strategy for the MSCI World Index."
+      "description": "Analyzed European options for arbitrage opportunities via Black-Scholes and developed a delta hedging strategy for the MSCI World Index.",
+      "date": "2025-01",
+      "category": "Finance & Quant"
     },
     {
       "title": "Super Mario Bros",
       "url": "https://github.com/AlvaroMartinRuiz/super_mario_bross",
-      "description": "Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering."
+      "description": "Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering.",
+      "date": "2023-05",
+      "category": "Game Development"
     },
     {
       "title": "Titanic Survival Predictions",
       "url": "https://github.com/AlvaroMartinRuiz/titanic_survival_predictions",
-      "description": "Applied decision trees and random forests in R to predict Titanic survival, accompanied by exploratory data analysis reports."
+      "description": "Applied decision trees and random forests in R to predict Titanic survival, accompanied by exploratory data analysis reports.",
+      "date": "2024-02",
+      "category": "Data Analytics"
     },
     {
       "title": "Excel Dashboard Titanic",
       "url": "https://github.com/AlvaroMartinRuiz/excel_dashboard_titanic",
-      "description": "Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities."
+      "description": "Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities.",
+      "date": "2023-01",
+      "category": "Data Analytics"
     },
     {
       "title": "Cooking Recipes Platform",
       "url": "https://github.com/AlvaroMartinRuiz/Cooking_recipes_2023",
-      "description": "A full-stack web application built with Flask and SQLAlchemy that allows users to discover, share, and interact with cooking recipes."
+      "description": "A full-stack web application built with Flask and SQLAlchemy that allows users to discover, share, and interact with cooking recipes.",
+      "date": "2023-10",
+      "category": "App & Web Development"
     },
     {
       "title": "Skill Gap Analysis",
       "url": "https://github.com/skill-gap-dev/skill_gap_analysis",
-      "description": "A career-analytics platform that identifies the gap between a candidate's current skill set and the requirements of their target roles using NLP and graph-based analytics."
+      "description": "A career-analytics platform that identifies the gap between a candidate's current skill set and the requirements of their target roles using NLP and graph-based analytics.",
+      "date": "2025-02",
+      "category": "Machine Learning & AI"
     },
     {
       "title": "News Fake Detection & Clustering",
       "url": "https://github.com/carolinalopezdelamadriz/MLA_FinalProject2025",
-      "description": "A machine learning project exploring if the authenticity of news articles can be determined using only textual content through NLP, classification models, and clustering."
+      "description": "A machine learning project exploring if the authenticity of news articles can be determined using only textual content through NLP, classification models, and clustering.",
+      "date": "2025-03",
+      "category": "Machine Learning & AI"
     },
     {
       "title": "The Poop App",
       "url": "https://github.com/carlosfya/PoopApp",
-      "description": "An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues."
+      "description": "An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues.",
+      "date": "2024-06",
+      "category": "App & Web Development"
     }
   ]
 }

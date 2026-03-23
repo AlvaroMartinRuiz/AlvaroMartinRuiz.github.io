@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-us" class="m-auto  dark "><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+  <title>Project Portfolio - Alvaro Martin Ruiz | Portfolio</title>
+  
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  />
+  <meta name="theme-color" content="" />
+  <meta name="description" content="Website title" />
+  <meta name="author" content="Darshan Baral" />
+  <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+
+  
+  
+  <link href="/main.css" rel="stylesheet" />
+  
+
+  <style>
+     
+    html {
+      touch-action: manipulation;
+      scroll-behavior: smooth;
+    }
+
+    .panel {
+      max-height: 0;
+      transition: 0.3s ease-out;
+    }
+
+    .profile-photo-container {
+      img {
+        max-width: 100%;
+      }
+    }
+     
+    .pagefind-ui__search-input {
+      color: black;
+      width: 100%;
+      padding: 0.5em;
+      border-radius: 0.25em;
+      border: 1px solid gray;
+    }
+    .pagefind-ui__search-clear {
+      display: none;
+    }
+    .dark .pagefind-ui__search-input {
+      color: white;
+      background-color: #322d2d;
+      width: 100%;
+      padding: 0.5em;
+      border-radius: 0.25em;
+      border: 1px solid gray;
+    }
+    .dark .pagefind-ui__search-input::placeholder {
+      color: #8f8f8f;
+    }
+    .chevron {
+      transition: 300ms linear rotate;
+    }
+    .active > .chevron {
+      transform: rotate(90deg);
+    }
+  </style>
+
+  <script>
+    const expandAccordion = (elem) => {
+      const allPanels = Array.from(document.querySelectorAll(".panel"));
+      const allAccordion = Array.from(document.querySelectorAll(".accordion"));
+
+      if (!elem.parentElement.classList.contains("active")) {
+        allAccordion.forEach((acc) => {
+          acc.classList.remove("active");
+        });
+        elem.parentElement.classList.add("active");
+        allPanels.forEach(function (elem) {
+          elem.style.maxHeight = null;
+        });
+        let activePanel = elem.parentElement.nextElementSibling;
+        if (
+          activePanel.id != "skill-panel" &&
+          document.querySelector("#skill-panel")
+        ) {
+          let skillBars = Array.from(
+            document.querySelectorAll("#skill-percent")
+          );
+          skillBars.forEach((elem) => {
+            elem.style.width = "0";
+          });
+        }
+        activePanel.style.maxHeight = activePanel.scrollHeight + "px";
+      } else {
+        elem.parentElement.classList.remove("active");
+        let activePanel = elem.parentElement.nextElementSibling;
+        activePanel.style.maxHeight = null;
+      }
+    };
+  </script>
+
+  <script>
+    let html = document.querySelector("html");
+    let theme = window.localStorage.getItem("theme");
+
+    const setTheme = (theme) => {
+      html.classList.remove("light");
+      if (theme === "dark") {
+        html.classList.add("dark");
+        window.localStorage.setItem("theme", "dark");
+      } else {
+        html.classList.remove("dark");
+        window.localStorage.setItem("theme", "light");
+      }
+      fixThemeToggleIcon(theme);
+    };
+
+    const fixThemeToggleIcon = (theme) => {
+      let themeToggle = document.querySelector(".theme-toggle");
+      if (themeToggle) {
+        if (theme === "dark") {
+          themeToggle.classList.remove("bi-moon");
+          themeToggle.classList.add("bi-brightness-high");
+        } else {
+          themeToggle.classList.remove("bi-brightness-high");
+          themeToggle.classList.add("bi-moon");
+        }
+      }
+    };
+
+    if (theme == null) {
+      if (html.classList.contains("dark")) {
+        theme = "dark";
+      } else if (html.classList.contains("light")) {
+        theme = "light";
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        if (prefersDark) {
+          theme = "dark";
+        } else {
+          theme = "light";
+        }
+      }
+    }
+
+    setTheme(theme);
+
+    const toggleTheme = () => {
+      html.classList.contains("dark") ? setTheme("light") : setTheme("dark");
+    };
+
+    window.onload = () => {
+      fixThemeToggleIcon(theme);
+
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="h-screen p-2 m-auto max-w-4xl flex flex-col">
+    
+    <header
+  class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between"
+>
+  <div>
+    <a class="nav-menu-item" href="//localhost:1313/">Home</a>
+    <a class="nav-menu-item" href="/projects">Projects</a>
+    <a class="nav-menu-item" href="/blog">Blog</a>
+  </div>
+  <div>
+    <a class="mr-4" href="/search">
+      <i class="bi bi-search"></i>
+    </a>
+    <i
+      class="bi bi-brightness-high theme-toggle text-blue-500 hover:text-blue-700 dark:text-yellow-300 dark:hover:text-yellow-500 cursor-pointer text-lg mr-9 sm:mr-0"
+      onclick="toggleTheme()"
+    ></i>
+  </div>
+</header>
+
+
+
+    
+    <main class="grow">
+<div class="prose dark:prose-invert max-w-none" style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+  <div style="margin-bottom: 2rem;">
+    <a href="/" style="text-decoration: none; color: #3b82f6; font-weight: bold; display: inline-block; padding: 0.5rem 1rem; border: 1px solid #3b82f6; border-radius: 0.5rem; transition: background-color 0.2s;">
+      <i class="bi bi-arrow-left mr-2"></i>Back to Home
+    </a>
+  </div>
+  <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 2px solid #444; padding-bottom: 1rem;">Project Portfolio</h1>
+  
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+  <details class="group" style="margin-bottom: 2rem; background-color: var(--bg-secondary, rgba(128,128,128,0.05)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem;">
+    <summary style="font-size: 1.8rem; font-weight: 700; color: #60a5fa; cursor: pointer; list-style: none; display: flex; align-items: center; user-select: none; outline: none;">
+      <i class="bi bi-folder2-open mr-3" style="font-size: 1.5rem;"></i>Machine Learning &amp; AI
+      <span style="margin-left: auto; font-size: 1.2rem;"><i class="bi bi-chevron-down"></i></span>
+    </summary>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/carolinalopezdelamadriz/MLA_FinalProject2025" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">News Fake Detection &amp; Clustering</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2025-03
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          A machine learning project exploring if the authenticity of news articles can be determined using only textual content through NLP, classification models, and clustering.
+        </div>
+      </div>
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/skill-gap-dev/skill_gap_analysis" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Skill Gap Analysis</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2025-02
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          A career-analytics platform that identifies the gap between a candidate&rsquo;s current skill set and the requirements of their target roles using NLP and graph-based analytics.
+        </div>
+      </div>
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/reinforcement_learning_pacman" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Reinforcement Learning Pacman</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2024-12
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          Trained a Pac-Man agent using reinforcement learning techniques to play autonomously and maximize its score through self-play and strategic decision-making.
+        </div>
+      </div>
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/predicting_heart_disease" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Predicting Heart Disease</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2024-05
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          This project aimed to predict heart failure using 11 cardiovascular-related features.
+        </div>
+      </div>
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/Country_Development_and_Economic_Freedom" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Country Development &amp; Economic Freedom</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2024-01
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          Analyzed how economic freedom impacts a country&rsquo;s development using extensive preprocessing, EDA, and algorithms such as PCA, FA, and clustering.
+        </div>
+      </div>
+      
+    </div>
+  </details>
+  
+  <details class="group" style="margin-bottom: 2rem; background-color: var(--bg-secondary, rgba(128,128,128,0.05)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem;">
+    <summary style="font-size: 1.8rem; font-weight: 700; color: #60a5fa; cursor: pointer; list-style: none; display: flex; align-items: center; user-select: none; outline: none;">
+      <i class="bi bi-folder2-open mr-3" style="font-size: 1.5rem;"></i>Finance &amp; Quant
+      <span style="margin-left: auto; font-size: 1.2rem;"><i class="bi bi-chevron-down"></i></span>
+    </summary>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/delta_hedging_MSCI_world" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Delta Hedging MSCI World</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2025-01
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          Analyzed European options for arbitrage opportunities via Black-Scholes and developed a delta hedging strategy for the MSCI World Index.
+        </div>
+      </div>
+      
+    </div>
+  </details>
+  
+  <details class="group" style="margin-bottom: 2rem; background-color: var(--bg-secondary, rgba(128,128,128,0.05)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem;">
+    <summary style="font-size: 1.8rem; font-weight: 700; color: #60a5fa; cursor: pointer; list-style: none; display: flex; align-items: center; user-select: none; outline: none;">
+      <i class="bi bi-folder2-open mr-3" style="font-size: 1.5rem;"></i>Game Development
+      <span style="margin-left: auto; font-size: 1.2rem;"><i class="bi bi-chevron-down"></i></span>
+    </summary>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/super_mario_bross" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Super Mario Bros</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2023-05
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering.
+        </div>
+      </div>
+      
+    </div>
+  </details>
+  
+  <details class="group" style="margin-bottom: 2rem; background-color: var(--bg-secondary, rgba(128,128,128,0.05)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem;">
+    <summary style="font-size: 1.8rem; font-weight: 700; color: #60a5fa; cursor: pointer; list-style: none; display: flex; align-items: center; user-select: none; outline: none;">
+      <i class="bi bi-folder2-open mr-3" style="font-size: 1.5rem;"></i>Data Analytics
+      <span style="margin-left: auto; font-size: 1.2rem;"><i class="bi bi-chevron-down"></i></span>
+    </summary>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/titanic_survival_predictions" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Titanic Survival Predictions</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2024-02
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          Applied decision trees and random forests in R to predict Titanic survival, accompanied by exploratory data analysis reports.
+        </div>
+      </div>
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/excel_dashboard_titanic" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Excel Dashboard Titanic</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2023-01
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities.
+        </div>
+      </div>
+      
+    </div>
+  </details>
+  
+  <details class="group" style="margin-bottom: 2rem; background-color: var(--bg-secondary, rgba(128,128,128,0.05)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem;">
+    <summary style="font-size: 1.8rem; font-weight: 700; color: #60a5fa; cursor: pointer; list-style: none; display: flex; align-items: center; user-select: none; outline: none;">
+      <i class="bi bi-folder2-open mr-3" style="font-size: 1.5rem;"></i>App &amp; Web Development
+      <span style="margin-left: auto; font-size: 1.2rem;"><i class="bi bi-chevron-down"></i></span>
+    </summary>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/carlosfya/PoopApp" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">The Poop App</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2024-06
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues.
+        </div>
+      </div>
+      
+      <div style="background-color: var(--bg-secondary, rgba(128,128,128,0.1)); border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3;">
+          <a href="https://github.com/AlvaroMartinRuiz/Cooking_recipes_2023" target="_blank" style="text-decoration: none; color: inherit;" class="hover:text-blue-500 transition">Cooking Recipes Platform</a>
+        </h3>
+        <span style="font-size: 0.85rem; font-family: monospace; color: #888; margin-bottom: 1rem; display: inline-flex; align-items: center;">
+          <i class="bi bi-calendar-check mr-1" style="font-size: 0.9rem;"></i>2023-10
+        </span>
+        <div style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin: 0; color: var(--text-color);">
+          A full-stack web application built with Flask and SQLAlchemy that allows users to discover, share, and interact with cooking recipes.
+        </div>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
+    </main>
+    
+    <footer class="text-sm text-center border-t border-gray-500  py-6 ">
+  <p class="markdownify">powered by <a href="https://gohugo.io/">hugo</a></p>
+  <p >
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </p>
+
+  
+</footer>
+
+    
+  </body>
+</html>

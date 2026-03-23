@@ -2,61 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:63633/blog/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2026-03-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:63633/</loc>
+    <loc>//localhost:1313/blog/</loc>
     <lastmod>2026-03-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:63633/blog/first-post/</loc>
+    <loc>//localhost:1313/blog/first-post/</loc>
     <lastmod>2026-03-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:63633/search/</loc>
+    <loc>//localhost:1313/search/</loc>
     <lastmod>2024-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:63633/categories/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/tags/css/</loc>
   </url><url>
-    <loc>//localhost:63633/tags/css/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/categories/diam-aliqua/</loc>
   </url><url>
-    <loc>//localhost:63633/blog/markdown_syntax/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/categories/fringilla/</loc>
   </url><url>
-    <loc>//localhost:63633/tags/html/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/tags/html/</loc>
   </url><url>
-    <loc>//localhost:63633/tags/markdown/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/tags/laoreet/</loc>
   </url><url>
-    <loc>//localhost:63633/categories/syntax/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/tags/markdown/</loc>
   </url><url>
-    <loc>//localhost:63633/tags/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/tags/mollis-urna/</loc>
   </url><url>
-    <loc>//localhost:63633/categories/themes/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/tags/notes/</loc>
   </url><url>
-    <loc>//localhost:63633/tags/themes/</loc>
-    <lastmod>2022-11-19T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/projects/</loc>
   </url><url>
-    <loc>//localhost:63633/categories/diam-aliqua/</loc>
-    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/categories/syntax/</loc>
   </url><url>
-    <loc>//localhost:63633/categories/fringilla/</loc>
-    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/categories/themes/</loc>
   </url><url>
-    <loc>//localhost:63633/tags/laoreet/</loc>
-    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:63633/blog/post_3/</loc>
-    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:63633/tags/mollis-urna/</loc>
-    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:63633/tags/notes/</loc>
-    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/tags/themes/</loc>
   </url>
 </urlset>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" class="m-auto  dark "><head>
-	<meta name="generator" content="Hugo 0.158.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=63633&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.158.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <title>Alvaro Martin Ruiz | Portfolio</title>
   
@@ -104,6 +104,10 @@
           });
         }
         activePanel.style.maxHeight = activePanel.scrollHeight + "px";
+      } else {
+        elem.parentElement.classList.remove("active");
+        let activePanel = elem.parentElement.nextElementSibling;
+        activePanel.style.maxHeight = null;
       }
     };
   </script>
@@ -185,7 +189,8 @@
   class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between"
 >
   <div>
-    <a class="nav-menu-item" href="//localhost:63633/">Home</a>
+    <a class="nav-menu-item" href="//localhost:1313/">Home</a>
+    <a class="nav-menu-item" href="/projects">Projects</a>
     <a class="nav-menu-item" href="/blog">Blog</a>
   </div>
   <div>
@@ -299,61 +304,76 @@
         
         
       >
-        <div class="">
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/predicting_heart_disease">Predicting Heart Disease</a>
-</h4>
-<p class="markdownify indent-8">This project aimed to predict heart failure using 11 cardiovascular-related features.</p>
+        <div class=""><a href="/projects/" class="text-sm font-semibold mb-3 inline-block text-blue-500 hover:text-blue-600 transition" style="margin-bottom: 1rem; color: #3b82f6;">
+  View All Projects by Category →
+</a>
+<br/>
 
 <h4>
-  <a href="https://github.com/AlvaroMartinRuiz/reinforcement_learning_pacman">Reinforcement Learning Pacman</a>
-</h4>
-<p class="markdownify indent-8">Trained a Pac-Man agent using reinforcement learning techniques to play autonomously and maximize its score through self-play and strategic decision-making.</p>
-
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/Country_Development_and_Economic_Freedom">Country Development &amp; Economic Freedom</a>
-</h4>
-<p class="markdownify indent-8">Analyzed how economic freedom impacts a country&rsquo;s development using extensive preprocessing, EDA, and algorithms such as PCA, FA, and clustering.</p>
-
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/delta_hedging_MSCI_world">Delta Hedging MSCI World</a>
-</h4>
-<p class="markdownify indent-8">Analyzed European options for arbitrage opportunities via Black-Scholes and developed a delta hedging strategy for the MSCI World Index.</p>
-
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/super_mario_bross">Super Mario Bros</a>
-</h4>
-<p class="markdownify indent-8">Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering.</p>
-
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/titanic_survival_predictions">Titanic Survival Predictions</a>
-</h4>
-<p class="markdownify indent-8">Applied decision trees and random forests in R to predict Titanic survival, accompanied by exploratory data analysis reports.</p>
-
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/excel_dashboard_titanic">Excel Dashboard Titanic</a>
-</h4>
-<p class="markdownify indent-8">Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities.</p>
-
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/Cooking_recipes_2023">Cooking Recipes Platform</a>
-</h4>
-<p class="markdownify indent-8">A full-stack web application built with Flask and SQLAlchemy that allows users to discover, share, and interact with cooking recipes.</p>
-
-<h4>
-  <a href="https://github.com/skill-gap-dev/skill_gap_analysis">Skill Gap Analysis</a>
-</h4>
-<p class="markdownify indent-8">A career-analytics platform that identifies the gap between a candidate&rsquo;s current skill set and the requirements of their target roles using NLP and graph-based analytics.</p>
-
-<h4>
-  <a href="https://github.com/carolinalopezdelamadriz/MLA_FinalProject2025">News Fake Detection &amp; Clustering</a>
+  <a href="https://github.com/carolinalopezdelamadriz/MLA_FinalProject2025" target="_blank">News Fake Detection &amp; Clustering</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-03</span>
 </h4>
 <p class="markdownify indent-8">A machine learning project exploring if the authenticity of news articles can be determined using only textual content through NLP, classification models, and clustering.</p>
 
 <h4>
-  <a href="https://github.com/carlosfya/PoopApp">The Poop App</a>
+  <a href="https://github.com/skill-gap-dev/skill_gap_analysis" target="_blank">Skill Gap Analysis</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-02</span>
+</h4>
+<p class="markdownify indent-8">A career-analytics platform that identifies the gap between a candidate&rsquo;s current skill set and the requirements of their target roles using NLP and graph-based analytics.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/delta_hedging_MSCI_world" target="_blank">Delta Hedging MSCI World</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-01</span>
+</h4>
+<p class="markdownify indent-8">Analyzed European options for arbitrage opportunities via Black-Scholes and developed a delta hedging strategy for the MSCI World Index.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/reinforcement_learning_pacman" target="_blank">Reinforcement Learning Pacman</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-12</span>
+</h4>
+<p class="markdownify indent-8">Trained a Pac-Man agent using reinforcement learning techniques to play autonomously and maximize its score through self-play and strategic decision-making.</p>
+
+<h4>
+  <a href="https://github.com/carlosfya/PoopApp" target="_blank">The Poop App</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-06</span>
 </h4>
 <p class="markdownify indent-8">An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/predicting_heart_disease" target="_blank">Predicting Heart Disease</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-05</span>
+</h4>
+<p class="markdownify indent-8">This project aimed to predict heart failure using 11 cardiovascular-related features.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/titanic_survival_predictions" target="_blank">Titanic Survival Predictions</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-02</span>
+</h4>
+<p class="markdownify indent-8">Applied decision trees and random forests in R to predict Titanic survival, accompanied by exploratory data analysis reports.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/Country_Development_and_Economic_Freedom" target="_blank">Country Development &amp; Economic Freedom</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-01</span>
+</h4>
+<p class="markdownify indent-8">Analyzed how economic freedom impacts a country&rsquo;s development using extensive preprocessing, EDA, and algorithms such as PCA, FA, and clustering.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/Cooking_recipes_2023" target="_blank">Cooking Recipes Platform</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2023-10</span>
+</h4>
+<p class="markdownify indent-8">A full-stack web application built with Flask and SQLAlchemy that allows users to discover, share, and interact with cooking recipes.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/super_mario_bross" target="_blank">Super Mario Bros</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2023-05</span>
+</h4>
+<p class="markdownify indent-8">Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering.</p>
+
+<h4>
+  <a href="https://github.com/AlvaroMartinRuiz/excel_dashboard_titanic" target="_blank">Excel Dashboard Titanic</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2023-01</span>
+</h4>
+<p class="markdownify indent-8">Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities.</p>
 
 </div>
       </div>
@@ -423,37 +443,13 @@
   
   <li class="mb-2">
     <a href="/blog/first-post/" class="text-blue-500 hover:underline dark:text-blue-400">
-      Welcome to My Blog
+      Understanding Brownian Motion
     </a>
     <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">
       Mar 23, 2026
     </span>
     
     <p class="text-sm mt-1 text-gray-700 dark:text-gray-300">This is my very first blog post on my new developer portfolio. Built with Hugo and the Aafu theme! …</p>
-    
-  </li>
-  
-  <li class="mb-2">
-    <a href="/blog/markdown_syntax/" class="text-blue-500 hover:underline dark:text-blue-400">
-      Demo Page
-    </a>
-    <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">
-      Nov 19, 2022
-    </span>
-    
-    <p class="text-sm mt-1 text-gray-700 dark:text-gray-300">This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also …</p>
-    
-  </li>
-  
-  <li class="mb-2">
-    <a href="/blog/post_3/" class="text-blue-500 hover:underline dark:text-blue-400">
-      luctus enim ultricies auctor pulvinar nam etiam
-    </a>
-    <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">
-      Jan 6, 2018
-    </span>
-    
-    <p class="text-sm mt-1 text-gray-700 dark:text-gray-300">donec lacinia eleifend sem a Pulvinar tempor ultrices amet praesent aliquet non magnis euismod elit …</p>
     
   </li>
   

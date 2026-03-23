@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" class="m-auto  dark "><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=63633&amp;path=livereload" data-no-instant defer></script>
+<html lang="en-us" class="m-auto  dark "><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60153&amp;path=livereload" data-no-instant defer></script>
   
   <title>Notes - Alvaro Martin Ruiz | Portfolio</title>
   
@@ -103,6 +103,10 @@
           });
         }
         activePanel.style.maxHeight = activePanel.scrollHeight + "px";
+      } else {
+        elem.parentElement.classList.remove("active");
+        let activePanel = elem.parentElement.nextElementSibling;
+        activePanel.style.maxHeight = null;
       }
     };
   </script>
@@ -184,7 +188,7 @@
   class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between"
 >
   <div>
-    <a class="nav-menu-item" href="//localhost:63633/">Home</a>
+    <a class="nav-menu-item" href="//localhost:60153/">Home</a>
     <a class="nav-menu-item" href="/blog">Blog</a>
   </div>
   <div>
@@ -215,7 +219,7 @@
         onclick="expandAccordion(this)"
         class="cursor-pointer chevron p-2 mr-4 bi bi-caret-right rounded-sm text-blue-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700"
       ></i>
-      <a href="//localhost:63633/blog/post_3/"
+      <a href="//localhost:60153/blog/post_3/"
         ><h2 class="accordion m-0">luctus enim ultricies auctor pulvinar nam etiam</h2></a
       >
     </div>

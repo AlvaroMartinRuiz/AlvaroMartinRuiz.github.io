@@ -1,0 +1,11 @@
+<a href="/projects/" class="text-sm font-semibold mb-3 inline-block text-blue-500 hover:text-blue-600 transition" style="margin-bottom: 1rem; color: #3b82f6;">
+  View All Projects by Category →
+</a>
+<br/>
+{{ range sort .Site.Data.projects.list "date" "desc" }}
+<h4>
+  <a href="{{ .url }}" target="_blank">{{- .title -}}</a>
+  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">{{ .date }}</span>
+</h4>
+<p class="markdownify indent-8">{{- .description | markdownify -}}</p>
+{{ end }}
