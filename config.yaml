@@ -1,0 +1,20 @@
+baseURL: /
+languageCode: en-us
+build:
+  writeStats: true
+title: aafu theme
+# Uncomment below to use aafu as hugo theme. See instructions in README.md
+theme: aafu
+
+params:
+  author: Darshan Baral
+  description: Website title
+  copyright: powered by [hugo](https://gohugo.io/)
+  theme:
+    mainTheme: dark
+    showAttribute: true
+    singlePage: false
+  accordion:
+    - item: about_me
+      expand: true 
+    - item: projects

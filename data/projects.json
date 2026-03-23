@@ -1,0 +1,11 @@
+{
+  "title": "Projects",
+  "icon": "bi bi-kanban",
+  "list": [
+    {
+      "title": "My First Project",
+      "url": "https://github.com/",
+      "description": "A showcase of my recent work."
+    }
+  ]
+}
