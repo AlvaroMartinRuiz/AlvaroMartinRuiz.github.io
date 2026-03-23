@@ -931,6 +931,10 @@
   .underline {
     text-decoration-line: underline !important;
   }
+  .outline {
+    outline-style: var(--tw-outline-style) !important;
+    outline-width: 1px !important;
+  }
   .drop-shadow-md {
     --tw-drop-shadow-size: drop-shadow(0 3px 3px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.12))) !important;
     --tw-drop-shadow: drop-shadow(var(--drop-shadow-md)) !important;
@@ -1537,6 +1541,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1665,6 +1674,7 @@
       --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

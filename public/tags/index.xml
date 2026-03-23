@@ -2,60 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alvaro Martin Ruiz | Portfolio</title>
-    <link>//localhost:60153/tags/</link>
+    <link>//localhost:58034/tags/</link>
     <description>Recent content in Tags on Alvaro Martin Ruiz | Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Nov 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:60153/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Css</title>
-      <link>//localhost:60153/tags/css/</link>
-      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:60153/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Html</title>
-      <link>//localhost:60153/tags/html/</link>
-      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:60153/tags/html/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>//localhost:60153/tags/markdown/</link>
-      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:60153/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Themes</title>
-      <link>//localhost:60153/tags/themes/</link>
-      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:60153/tags/themes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Laoreet</title>
-      <link>//localhost:60153/tags/laoreet/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:60153/tags/laoreet/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mollis Urna</title>
-      <link>//localhost:60153/tags/mollis-urna/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:60153/tags/mollis-urna/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Notes</title>
-      <link>//localhost:60153/tags/notes/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:60153/tags/notes/</guid>
-      <description></description>
-    </item>
+    <atom:link href="//localhost:58034/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
