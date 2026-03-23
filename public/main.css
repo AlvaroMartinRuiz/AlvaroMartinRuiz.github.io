@@ -718,6 +718,9 @@
   .grid {
     display: grid !important;
   }
+  .inline {
+    display: inline !important;
+  }
   .table {
     display: table !important;
   }
@@ -899,6 +902,9 @@
   }
   .text-gray-500 {
     color: var(--color-gray-500) !important;
+  }
+  .text-gray-600 {
+    color: var(--color-gray-600) !important;
   }
   .text-gray-700 {
     color: var(--color-gray-700) !important;

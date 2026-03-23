@@ -2,7 +2,7 @@ baseURL: /
 languageCode: en-us
 build:
   writeStats: true
-title: aafu theme
+title: Alvaro Martin Ruiz | Portfolio
 # Uncomment below to use aafu as hugo theme. See instructions in README.md
 theme: aafu
 
