@@ -1,0 +1,30 @@
+<div class="pdf-container my-4" style="text-align: center;">
+  <style>
+    .download-btn {
+        display: inline-block;
+        background-color: #2563eb;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.2s;
+        margin-top: 1rem;
+    }
+    .download-btn:hover {
+        background-color: #1d4ed8;
+    }
+  </style>
+
+  <object data="/Alvaro_Martin_CV.pdf" type="application/pdf" width="100%" height="800px" style="border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+    <p class="text-gray-600 dark:text-gray-400">Your browser does not support inline PDFs. 
+      <a href="/Alvaro_Martin_CV.pdf" class="text-blue-500 hover:underline">Download the PDF</a> instead.
+    </p>
+  </object>
+  
+  <div class="mt-4">
+    <a href="/Alvaro_Martin_CV.pdf" download="Alvaro_Martin_CV.pdf" class="download-btn">
+      <i class="bi bi-download mr-2"></i> Download CV (PDF)
+    </a>
+  </div>
+</div>
