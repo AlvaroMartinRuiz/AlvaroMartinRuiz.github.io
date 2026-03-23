@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "bi bi-envelope",
+        "url": "mailto:alvarorz.martin@gmail.com",
+        "title": "Email"
+    },
+    {
+        "icon": "bi bi-linkedin",
+        "url": "https://www.linkedin.com/in/alvaro-martin-ruiz-engineering/",
+        "title": "LinkedIn"
+    },
+    {
+        "icon": "bi bi-github",
+        "url": "https://github.com/AlvaroMartinRuiz",
+        "title": "GitHub"
+    }
+]
