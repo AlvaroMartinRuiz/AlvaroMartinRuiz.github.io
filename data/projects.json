@@ -79,6 +79,27 @@
       "description": "An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues.",
       "date": "2024-06",
       "category": "App & Web Development"
+    },
+    {
+      "title": "Line-Following Robot",
+      "url": "https://github.com/AlvaroMartinRuiz/Line_Following_Robot",
+      "description": "Developed an autonomous line-following robot using the STM32L152RCTX Discovery Board, following a 4-phase modular progression from GPIO control to advanced motor logic.",
+      "date": "2024-05",
+      "category": "Embedded Systems"
+    },
+    {
+      "title": "Balanced RF Amplifier",
+      "url": "https://github.com/AlvaroMartinRuiz/two-stage-balanced-rf-amplifier",
+      "description": "Designed and simulated a two-stage balanced RF amplifier at 4.5 GHz using AWR Microwave Office, optimizing gain, noise figure, and stability.",
+      "date": "2025-03",
+      "category": "RF Engineering"
+    },
+    {
+      "title": "Optimization Portfolio",
+      "url": "https://github.com/AlvaroMartinRuiz/optimization_project",
+      "description": "A collection of optimization algorithms, including TSP solutions with interactive map visualizations and finance-oriented portfolio risk/return simulations.",
+      "date": "2025-03",
+      "category": "Data Analytics"
     }
   ]
 }

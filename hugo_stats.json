@@ -134,6 +134,7 @@
       "my-4",
       "my-6",
       "nav",
+      "nav-menu",
       "nav-menu-item",
       "overflow-hidden",
       "p-2",
@@ -176,6 +177,8 @@
     "ids": [
       "overview",
       "panel-item-0",
+      "panel-item-1",
+      "panel-item-2",
       "search"
     ]
   }

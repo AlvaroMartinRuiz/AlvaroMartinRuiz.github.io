@@ -206,14 +206,29 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute !important;
+  }
+  .fixed {
+    position: fixed !important;
+  }
   .relative {
     position: relative !important;
+  }
+  .static {
+    position: static !important;
+  }
+  .sticky {
+    position: sticky !important;
   }
   .start {
     inset-inline-start: var(--spacing) !important;
   }
   .end {
     inset-inline-end: var(--spacing) !important;
+  }
+  .isolate {
+    isolation: isolate !important;
   }
   .col-span-2 {
     grid-column: span 2 / span 2 !important;
@@ -724,11 +739,17 @@
   .grid {
     display: grid !important;
   }
+  .hidden {
+    display: none !important;
+  }
   .inline {
     display: inline !important;
   }
   .inline-block {
     display: inline-block !important;
+  }
+  .table {
+    display: table !important;
   }
   .h-full {
     height: 100% !important;
@@ -925,6 +946,10 @@
   .text-white {
     color: var(--color-white) !important;
   }
+  .ordinal {
+    --tw-ordinal: ordinal !important;
+    font-variant-numeric: var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,) !important;
+  }
   .underline {
     text-decoration-line: underline !important;
   }
@@ -939,6 +964,9 @@
   }
   .invert {
     --tw-invert: invert(100%) !important;
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,) !important;
+  }
+  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,) !important;
   }
   .transition {
@@ -1538,6 +1566,26 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-ordinal {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-slashed-zero {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-figure {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-spacing {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-fraction {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -1671,6 +1719,11 @@
       --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-ordinal: initial;
+      --tw-slashed-zero: initial;
+      --tw-numeric-figure: initial;
+      --tw-numeric-spacing: initial;
+      --tw-numeric-fraction: initial;
       --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
