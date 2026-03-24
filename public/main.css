@@ -730,9 +730,6 @@
   .inline-block {
     display: inline-block !important;
   }
-  .table {
-    display: table !important;
-  }
   .h-full {
     height: 100% !important;
   }
