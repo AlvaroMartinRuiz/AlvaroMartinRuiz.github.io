@@ -13,6 +13,7 @@
       "h4",
       "head",
       "header",
+      "hr",
       "html",
       "i",
       "iframe",
@@ -24,6 +25,7 @@
       "p",
       "script",
       "span",
+      "strong",
       "style",
       "summary",
       "title",
@@ -115,6 +117,7 @@
       "mb-4",
       "mb-6",
       "md:grid-cols-5",
+      "md:prose-base",
       "metadata",
       "metadata-panel",
       "ml-2",
@@ -143,6 +146,7 @@
       "pdf-container",
       "profile-photo-container",
       "prose",
+      "prose-sm",
       "prose-stone",
       "px-2",
       "px-4",
@@ -175,12 +179,12 @@
       "w-full"
     ],
     "ids": [
+      "-the-extended-version",
       "overview",
       "panel-item-0",
       "panel-item-1",
       "panel-item-2",
-      "search",
-      "the-professional-version"
+      "search"
     ]
   }
 }
