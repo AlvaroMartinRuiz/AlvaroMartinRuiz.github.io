@@ -6,6 +6,7 @@
       "br",
       "details",
       "div",
+      "em",
       "footer",
       "h1",
       "h2",
@@ -179,7 +180,6 @@
       "w-full"
     ],
     "ids": [
-      "-the-extended-version",
       "overview",
       "panel-item-0",
       "panel-item-1",

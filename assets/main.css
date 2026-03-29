@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @config './tailwind.config.js';
 
 @layer base {
@@ -18,39 +19,49 @@
       border-color: var(--color-gray-200, currentColor);
     }
   }
-}
 
-@layer utilities {
-  h1 {
-    @apply text-4xl mb-5 mt-1;
-  }
-  h2 {
-    @apply text-3xl mb-4 mt-1;
-  }
-  h3 {
-    @apply text-2xl mb-3 mt-1;
-  }
-  h4 {
-    @apply text-xl mb-2 mt-1;
-  }
-  h5 {
-    @apply text-lg mb-2 mt-1;
-  }
-  a {
-    @apply text-blue-500 hover:text-blue-700 hover:underline dark:text-yellow-300 dark:hover:text-yellow-500;
-  }
   body {
     @apply text-base bg-stone-50 dark:text-stone-50 dark:bg-darkest;
   }
+
+  /* Base Typography */
+  h1 { @apply text-4xl mb-5 mt-1; }
+  h2 { @apply text-3xl mb-4 mt-1; }
+  h3 { @apply text-2xl mb-3 mt-1; }
+  h4 { @apply text-xl mb-2 mt-1; }
+  h5 { @apply text-lg mb-2 mt-1; }
+  
+  p {
+    @apply mt-4 mb-4 leading-relaxed;
+  }
+
+  ul {
+    @apply list-disc ml-6 mb-4;
+  }
+
+  ol {
+    @apply list-decimal ml-6 mb-4;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
+  a {
+    @apply text-blue-500 hover:text-blue-700 hover:underline dark:text-yellow-300 dark:hover:text-yellow-500;
+  }
+
+  blockquote {
+    @apply bg-gray-100 dark:bg-dark rounded-sm p-4 my-4 italic border-l-4 border-gray-300;
+  }
+
   summary {
     @apply block text-sm;
   }
-  blockquote {
-    @apply bg-gray-100 dark:bg-dark rounded-sm;
-  }
-  p {
-    @apply mt-2 mb-2;
-  }
+}
+
+@layer utilities {
+  /* Keep utilities empty or for actual utility classes if needed */
 }
 
 @layer components {
