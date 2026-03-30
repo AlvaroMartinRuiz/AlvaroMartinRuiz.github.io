@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Alvaro Martin Ruiz | Portfolio</title>
-    <link>http://localhost:65413/blog/</link>
+    <link>http://localhost:49705/blog/</link>
     <description>Recent content in Blog on Alvaro Martin Ruiz | Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Mar 2026 11:15:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:65413/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49705/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding Dupire Formula</title>
-      <link>http://localhost:65413/blog/dupire_formula/</link>
+      <link>http://localhost:49705/blog/dupire_formula/</link>
       <pubDate>Tue, 24 Mar 2026 11:15:00 +0100</pubDate>
-      <guid>http://localhost:65413/blog/dupire_formula/</guid>
+      <guid>http://localhost:49705/blog/dupire_formula/</guid>
       <description>&lt;p&gt;This post will explore the Dupire Formula. Content to be updated.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Stochastic Calculus</title>
-      <link>http://localhost:65413/blog/stochastic_calculus/</link>
+      <link>http://localhost:49705/blog/stochastic_calculus/</link>
       <pubDate>Tue, 24 Mar 2026 11:15:00 +0100</pubDate>
-      <guid>http://localhost:65413/blog/stochastic_calculus/</guid>
+      <guid>http://localhost:49705/blog/stochastic_calculus/</guid>
       <description>&lt;p&gt;This post will explore the fundamentals of Stochastic Calculus. Content to be updated.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Brownian Motion</title>
-      <link>http://localhost:65413/blog/brownian_motion/</link>
+      <link>http://localhost:49705/blog/brownian_motion/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0100</pubDate>
-      <guid>http://localhost:65413/blog/brownian_motion/</guid>
-      <description>&lt;p&gt;This is my very first blog post on my new developer portfolio. Built with Hugo and the Aafu theme!&lt;/p&gt;&#xA;&lt;p&gt;Here is the latest version of my research.&lt;/p&gt;&#xA;&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;In this paper, we explore the fundamentals of Brownian Motion, its mathematical properties, and how it can be modeled. The document acts as an in-depth dive into stochastic processes.&lt;/p&gt;&#xA;&lt;div class=&#34;pdf-container my-4&#34; style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;iframe src=&#34;http://localhost:65413/papers/Understanding_Brownian_Motion.pdf#toolbar=1&amp;view=FitH&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border: 1px solid #ccc; border-radius: 8px;&#34;&gt;&#xA;    &lt;p&gt;Your browser does not support PDFs. &#xA;      &lt;a href=&#34;http://localhost:65413/papers/Understanding_Brownian_Motion.pdf&#34; class=&#34;text-blue-500 hover:underline&#34;&gt;Download the PDF&lt;/a&gt;.&#xA;    &lt;/p&gt;</description>
+      <guid>http://localhost:49705/blog/brownian_motion/</guid>
+      <description>&lt;p&gt;This is my very first blog post on my new developer portfolio. Built with Hugo and the Aafu theme!&lt;/p&gt;&#xA;&lt;p&gt;Here is the latest version of my research.&lt;/p&gt;&#xA;&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;In this paper, we explore the fundamentals of Brownian Motion, its mathematical properties, and how it can be modeled. The document acts as an in-depth dive into stochastic processes.&lt;/p&gt;&#xA;&lt;div class=&#34;pdf-container my-4&#34; style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;iframe src=&#34;http://localhost:49705/papers/Understanding_Brownian_Motion.pdf#toolbar=1&amp;view=FitH&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border: 1px solid #ccc; border-radius: 8px;&#34;&gt;&#xA;    &lt;p&gt;Your browser does not support PDFs. &#xA;      &lt;a href=&#34;http://localhost:49705/papers/Understanding_Brownian_Motion.pdf&#34; class=&#34;text-blue-500 hover:underline&#34;&gt;Download the PDF&lt;/a&gt;.&#xA;    &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
