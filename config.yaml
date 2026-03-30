@@ -5,6 +5,7 @@ build:
 title: Alvaro Martin Ruiz | Portfolio
 # Uncomment below to use aafu as hugo theme. See instructions in README.md
 theme: aafu
+ignoreFiles: ["markdown_syntax/.*", "post_3\\.md"]
 
 params:
   author: Darshan Baral
