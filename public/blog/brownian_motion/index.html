@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" class="m-auto  dark "><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <script>document.documentElement.classList.add("js");</script>
   
   <title>Understanding Brownian Motion - Alvaro Martin Ruiz | Portfolio</title>
   
@@ -8,10 +9,40 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
   />
-  <meta name="theme-color" content="" />
-  <meta name="description" content="Website title" />
-  <meta name="author" content="Darshan Baral" />
-  <link rel="icon" href="/favicon.png?v=3" type="image/png" />
+  <meta name="theme-color" content="#3b82f6" />
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta name="description" content="This is my first blog post (I hope the first of many to come). In this post, I want to share with you my process of understanding Brownian Motion, starting from the very basics and going all the way to its insteresting properties and applications.
+Overview In this paper, I explore the fundamentals of Brownian motion, its mathematical properties, and how it can be modeled. The document serves as an in-depth dive into stochastic processes. I began writing it with almost no knowledge of stochastic calculus, and I’ve tried to reflect how my understanding evolved along the way. I hope you find it both easy to read and interesting.
+" />
+  <meta name="author" content="Álvaro Martín Ruiz" />
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Alvaro Martin Ruiz | Portfolio" />
+  <meta property="og:title" content="Understanding Brownian Motion" />
+  <meta property="og:description" content="This is my first blog post (I hope the first of many to come). In this post, I want to share with you my process of understanding Brownian Motion, starting from the very basics and going all the way to its insteresting properties and applications.
+Overview In this paper, I explore the fundamentals of Brownian motion, its mathematical properties, and how it can be modeled. The document serves as an in-depth dive into stochastic processes. I began writing it with almost no knowledge of stochastic calculus, and I’ve tried to reflect how my understanding evolved along the way. I hope you find it both easy to read and interesting.
+" />
+  <meta property="og:url" content="http://localhost:1313/blog/brownian_motion/" />
+  <meta property="og:image" content="http://localhost:1313/images/profile_hu_4f48ac65d6ec3e82.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Understanding Brownian Motion" />
+  <meta name="twitter:description" content="This is my first blog post (I hope the first of many to come). In this post, I want to share with you my process of understanding Brownian Motion, starting from the very basics and going all the way to its insteresting properties and applications.
+Overview In this paper, I explore the fundamentals of Brownian motion, its mathematical properties, and how it can be modeled. The document serves as an in-depth dive into stochastic processes. I began writing it with almost no knowledge of stochastic calculus, and I’ve tried to reflect how my understanding evolved along the way. I hope you find it both easy to read and interesting.
+" />
+  <meta name="twitter:image" content="http://localhost:1313/images/profile_hu_4f48ac65d6ec3e82.jpeg" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="/favicon.png?v=3" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -181,41 +212,80 @@
       }
     };
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const els = document.querySelectorAll(".reveal");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        els.forEach((e) => e.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((e) => io.observe(e));
+    });
+  </script>
 </head>
-<body class="h-screen p-2 m-auto max-w-4xl flex flex-col">
+<body class="min-h-screen flex flex-col dark:text-stone-50">
+    <div class="bg-fx" aria-hidden="true"></div>
     
-    <header
-  class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between"
->
-  <div>
-    <a class="nav-menu-item" href="http://localhost:1313/">Home</a>
-    <a class="nav-menu-item" href="/projects">Projects</a>
-    <a class="nav-menu-item" href="/blog">Blog</a>
-  </div>
-  <div>
-    <a class="mr-4" href="/search">
-      <i class="bi bi-search"></i>
+    <header class="sticky top-0 z-50 w-full border-b border-stone-200 dark:border-stone-800 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md">
+  <div class="max-w-5xl mx-auto px-4 h-16 flex flex-row items-center justify-between">
+    <a href="http://localhost:1313/" class="flex items-center gap-2 font-bold text-stone-900 dark:text-stone-100 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline tracking-tight transition-colors">
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-cyan-400 text-white text-sm font-bold">Á</span>
+      <span class="hidden sm:inline text-base">Álvaro Martín Ruiz</span>
     </a>
-    <i
-      class="bi bi-brightness-high theme-toggle text-blue-500 hover:text-blue-700 dark:text-yellow-300 dark:hover:text-yellow-500 cursor-pointer text-lg mr-9 sm:mr-0"
-      onclick="toggleTheme()"
-    ></i>
+    <nav class="flex items-center gap-1">
+      
+      
+      
+      <a class="nav-link" href="http://localhost:1313/">About</a>
+      <a class="nav-link" href="/projects">Projects</a>
+      <a class="nav-link nav-link-active" href="/blog">Blog</a>
+      <button
+        class="ml-1 w-9 h-9 inline-flex items-center justify-center rounded-md text-stone-500 hover:text-stone-900 hover:bg-stone-100 dark:text-stone-400 dark:hover:text-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer bg-transparent border-0"
+        onclick="toggleTheme()"
+        title="Toggle theme"
+      >
+        <i class="bi bi-brightness-high theme-toggle text-base"></i>
+      </button>
+    </nav>
   </div>
 </header>
 
 
 
     
-    <main class="grow">
+    <main class="grow w-full">
+<div class="reading-progress" id="reading-progress"></div>
 
-<div class="prose prose-stone dark:prose-invert max-w-none">
-<div class="mb-3">
-  <h1 class="top-h1">Understanding Brownian Motion</h1>
-  <p class="mb-1">February 25, 2026</p>
-  <p>&mdash;</p>
-</div>
-<div class="content">
-  <p>This is my first blog post (I hope the first of many to come). In this post, I want to share with you my process of understanding Brownian Motion, starting from the very basics and going all the way to its insteresting properties and applications.</p>
+<article class="max-w-3xl mx-auto px-4 py-12 sm:py-16 reveal">
+
+  <a href="/blog" class="inline-flex items-center gap-1.5 text-sm text-stone-500 dark:text-stone-400 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline transition-colors mb-8">
+    <i class="bi bi-arrow-left"></i> Back to blog
+  </a>
+
+  
+
+  <h1 class="text-3xl sm:text-4xl font-bold mt-0 mb-3 tracking-tight">Understanding Brownian Motion</h1>
+  <p class="text-xs font-mono text-stone-400 dark:text-stone-500 mb-8 mt-0">
+    February 25, 2026 · 1 min read
+  </p>
+
+  
+
+  <div class="prose prose-stone dark:prose-invert prose-base max-w-none">
+    <p>This is my first blog post (I hope the first of many to come). In this post, I want to share with you my process of understanding Brownian Motion, starting from the very basics and going all the way to its insteresting properties and applications.</p>
 <h3 id="overview">Overview</h3>
 <p>In this paper, I explore the fundamentals of Brownian motion, its mathematical properties, and how it can be modeled. The document serves as an in-depth dive into stochastic processes. I began writing it with almost no knowledge of stochastic calculus, and I’ve tried to reflect how my understanding evolved along the way. I hope you find it both easy to read and interesting.</p>
 <div class="pdf-container my-4" style="text-align: center;">
@@ -232,46 +302,52 @@
 </div>
 
 
-</div>
-</div>
-<div class="flex flex-row justify-around my-2">
-  <h3 class="mb-1 mt-1 text-left mr-4">
-    
-    <i class="text-gray-300 dark:text-gray-600 bi bi-caret-left"></i>
-    
-  </h3>
-  <h3 class="mb-1 mt-1 text-left ml-4">
-    
-    <a
-      href="/blog/stochastic_calculus/"
-      title="Understanding Stochastic Calculus"
-    >
-      <i class="nav-menu bi bi-caret-right"></i>
-    </a>
-    
-  </h3>
-</div>
+  </div>
 
+  
+  <nav class="mt-14 pt-6 border-t border-stone-200 dark:border-stone-800 flex justify-between gap-4 text-sm">
+    <div>
+      
+    </div>
+    <div class="text-right">
+      
+      <a href="/blog/stochastic_calculus/" class="inline-flex items-center gap-1.5 text-stone-500 dark:text-stone-400 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline transition-colors">
+        Understanding Itô&#39;s Calculus: Part 1 <i class="bi bi-arrow-right"></i>
+      </a>
+      
+    </div>
+  </nav>
+  
+
+</article>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});"></script>
+
+<script>
+  (function () {
+    const bar = document.getElementById("reading-progress");
+    if (!bar) return;
+    const update = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      bar.style.width = max > 0 ? (h.scrollTop / max) * 100 + "%" : "0%";
+    };
+    document.addEventListener("scroll", update, { passive: true });
+    update();
+  })();
+</script>
 
     </main>
     
-    <footer class="text-sm text-center border-t border-gray-500  py-6 ">
-  <p class="markdownify">powered by <a href="https://gohugo.io/">hugo</a></p>
-  <p >
-    <i>
-      <a href="https://github.com/darshanbaral/aafu">
-        aafu
-      </a>
-    </i>
-    by
-    <a href="https://www.darshanbaral.com/">
-      darshan
-    </a>
-  </p>
-
-  
+    <div class="max-w-5xl w-full mx-auto px-4">
+      <footer class="text-sm text-center text-stone-400 dark:text-stone-500 border-t border-stone-200 dark:border-stone-800 py-8 mt-10">
+  <p class="mb-0 mt-0">© 2026 Álvaro Martín Ruiz</p>
 </footer>
 
+    </div>
     
   </body>
 </html>

@@ -1,37 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-us" class="m-auto  dark "><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  
-  <title>Blog - Alvaro Martin Ruiz | Portfolio</title>
-  
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-  />
-  <meta name="theme-color" content="" />
-  <meta name="description" content="Website title" />
-  <meta name="author" content="Darshan Baral" />
-  <link rel="icon" href="/favicon.png?v=3" type="image/png" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
-  />
+<html lang="en-us" class="m-auto  dark ">
 
-  
-  
+<head>
+  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <title>Blog - Alvaro Martin Ruiz | Portfolio</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="theme-color" content="#3b82f6" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="description"
+    content="Álvaro Martín Ruiz — final-year Data Science &amp; Telecommunications Engineering student at UC3M, building at the intersection of machine learning and financial markets." />
+  <meta name="author" content="Álvaro Martín Ruiz" />
+
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Alvaro Martin Ruiz | Portfolio" />
+  <meta property="og:title" content="Blog" />
+  <meta property="og:description"
+    content="Álvaro Martín Ruiz — final-year Data Science &amp; Telecommunications Engineering student at UC3M, building at the intersection of machine learning and financial markets." />
+  <meta property="og:url" content="http://localhost:1313/blog/" />
+  <meta property="og:image" content="http://localhost:1313/images/profile_hu_4f48ac65d6ec3e82.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog" />
+  <meta name="twitter:description"
+    content="Álvaro Martín Ruiz — final-year Data Science &amp; Telecommunications Engineering student at UC3M, building at the intersection of machine learning and financial markets." />
+  <meta name="twitter:image" content="http://localhost:1313/images/profile_hu_4f48ac65d6ec3e82.jpeg" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="/favicon.png?v=3" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono" />
+
+
+
   <link href="/main.css" rel="stylesheet" />
-  
+
 
   <style>
-     
     html {
       touch-action: manipulation;
       scroll-behavior: smooth;
@@ -47,7 +65,7 @@
         max-width: 100%;
       }
     }
-     
+
     .pagefind-ui__search-input {
       color: black;
       width: 100%;
@@ -55,9 +73,11 @@
       border-radius: 0.25em;
       border: 1px solid gray;
     }
+
     .pagefind-ui__search-clear {
       display: none;
     }
+
     .dark .pagefind-ui__search-input {
       color: white;
       background-color: #322d2d;
@@ -66,13 +86,16 @@
       border-radius: 0.25em;
       border: 1px solid gray;
     }
+
     .dark .pagefind-ui__search-input::placeholder {
       color: #8f8f8f;
     }
+
     .chevron {
       transition: 300ms linear rotate;
     }
-    .active > .chevron {
+
+    .active>.chevron {
       transform: rotate(90deg);
     }
   </style>
@@ -181,116 +204,127 @@
       }
     };
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const els = document.querySelectorAll(".reveal");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        els.forEach((e) => e.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((e) => io.observe(e));
+    });
+  </script>
 </head>
-<body class="h-screen p-2 m-auto max-w-4xl flex flex-col">
-    
-    <header
-  class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between"
->
-  <div>
-    <a class="nav-menu-item" href="http://localhost:1313/">Home</a>
-    <a class="nav-menu-item" href="/projects">Projects</a>
-    <a class="nav-menu-item" href="/blog">Blog</a>
-  </div>
-  <div>
-    <a class="mr-4" href="/search">
-      <i class="bi bi-search"></i>
-    </a>
-    <i
-      class="bi bi-brightness-high theme-toggle text-blue-500 hover:text-blue-700 dark:text-yellow-300 dark:hover:text-yellow-500 cursor-pointer text-lg mr-9 sm:mr-0"
-      onclick="toggleTheme()"
-    ></i>
-  </div>
-</header>
 
+<body class="min-h-screen flex flex-col dark:text-stone-50">
+  <div class="bg-fx" aria-hidden="true"></div>
 
-
-    
-    <main class="grow">
-<div class="prose dark:prose-invert max-w-none">
-  <h1 class="standard ">
-    Blog
-  </h1>
-  
-  <div class="">
-    <div
-      class="rounded-sm hover:bg-gray-400 dark:hover:bg-darker flex flex-row items-center justify-start accordion mt-0 mb-0 p-2 active"
-    >
-      <i
-        onclick="expandAccordion(this)"
-        class="cursor-pointer chevron p-2 mr-4 bi bi-caret-right rounded-sm text-blue-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700"
-      ></i>
-      <a href="/blog/stochastic_calculus/"
-        ><h2 class="accordion m-0">Understanding Stochastic Calculus</h2></a
-      >
-    </div>
-    <div
-      id="panel-item-0"
-      class="panel metadata-panel overflow-hidden bg-gray-200 dark:bg-dark"
-    >
-      <div class="metadata p-2"><p class="mt-0 mb-0 text-sm">March 24, 2026</p>
-<p class="mt-1 mb-0 text-sm">Reading Time: 1 minutes</p>
- 
-
-
-
-
-</div>
-    </div>
-  </div>
-  
-  <div class="">
-    <div
-      class="rounded-sm hover:bg-gray-400 dark:hover:bg-darker flex flex-row items-center justify-start accordion mt-0 mb-0 p-2 "
-    >
-      <i
-        onclick="expandAccordion(this)"
-        class="cursor-pointer chevron p-2 mr-4 bi bi-caret-right rounded-sm text-blue-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700"
-      ></i>
-      <a href="/blog/brownian_motion/"
-        ><h2 class="accordion m-0">Understanding Brownian Motion</h2></a
-      >
-    </div>
-    <div
-      id="panel-item-1"
-      class="panel metadata-panel overflow-hidden bg-gray-200 dark:bg-dark"
-    >
-      <div class="metadata p-2"><p class="mt-0 mb-0 text-sm">February 25, 2026</p>
-<p class="mt-1 mb-0 text-sm">Reading Time: 1 minutes</p>
- 
-
-
-
-
-</div>
-    </div>
-  </div>
-  
-</div>
-
-<div class="my-6 flex justify-center pagination-links">
-  
-</div>
-
-    </main>
-    
-    <footer class="text-sm text-center border-t border-gray-500  py-6 ">
-  <p class="markdownify">powered by <a href="https://gohugo.io/">hugo</a></p>
-  <p >
-    <i>
-      <a href="https://github.com/darshanbaral/aafu">
-        aafu
+  <header
+    class="sticky top-0 z-50 w-full border-b border-stone-200 dark:border-stone-800 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex flex-row items-center justify-between">
+      <a href="http://localhost:1313/"
+        class="flex items-center gap-2 font-bold text-stone-900 dark:text-stone-100 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline tracking-tight transition-colors">
+        <span
+          class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-cyan-400 text-white text-sm font-bold">Á</span>
+        <span class="hidden sm:inline text-base">Álvaro Martín Ruiz</span>
       </a>
-    </i>
-    by
-    <a href="https://www.darshanbaral.com/">
-      darshan
-    </a>
-  </p>
+      <nav class="flex items-center gap-1">
 
-  
-</footer>
 
-    
-  </body>
+
+        <a class="nav-link" href="http://localhost:1313/">About</a>
+        <a class="nav-link" href="/projects">Projects</a>
+        <a class="nav-link nav-link-active" href="/blog">Blog</a>
+        <button
+          class="ml-1 w-9 h-9 inline-flex items-center justify-center rounded-md text-stone-500 hover:text-stone-900 hover:bg-stone-100 dark:text-stone-400 dark:hover:text-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer bg-transparent border-0"
+          onclick="toggleTheme()" title="Toggle theme">
+          <i class="bi bi-brightness-high theme-toggle text-base"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+  <main class="grow w-full">
+    <div class="max-w-3xl mx-auto px-4 py-12 sm:py-16">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3 mt-0 tracking-tight">Blog</h1>
+      <p class="text-stone-500 dark:text-stone-400 mb-10 mt-0">Notes on stochastic calculus, quantitative finance and
+        the things I'm learning along the way.</p>
+
+      <div class="grid gap-5">
+
+
+        <a href="/blog/stochastic_calculus/" class="blog-card group no-underline hover:no-underline reveal">
+
+          <div class="flex items-center gap-3 text-xs font-mono text-stone-400 dark:text-stone-500 mb-2">
+            <span class="inline-flex items-center gap-1.5"><i class="bi bi-calendar3"></i>Apr 10, 2026</span>
+            <span class="text-stone-300 dark:text-stone-600">·</span><span class="inline-flex items-center gap-1.5"><i
+                class="bi bi-clock"></i>25 min read</span>
+          </div>
+          <h2
+            class="text-xl font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors mt-0 mb-2 leading-snug">
+            Understanding Itô&#39;s Calculus: Part 1</h2>
+
+          <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mt-0 mb-4">This post will explore the
+            fundamentals of Itô Calculus, starting from almost zero. It is intended to be explained in a way that is
+            easy to understand for someone with a basic knowledge of probability …</p>
+
+          <span class="read-more">Read article <i
+              class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i></span>
+        </a>
+
+
+        <a href="/blog/brownian_motion/" class="blog-card group no-underline hover:no-underline reveal">
+
+          <div class="flex items-center gap-3 text-xs font-mono text-stone-400 dark:text-stone-500 mb-2">
+            <span class="inline-flex items-center gap-1.5"><i class="bi bi-calendar3"></i>Feb 25, 2026</span>
+            <span class="text-stone-300 dark:text-stone-600">·</span><span class="inline-flex items-center gap-1.5"><i
+                class="bi bi-clock"></i>15 min read</span>
+          </div>
+          <h2
+            class="text-xl font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors mt-0 mb-2 leading-snug">
+            Understanding Brownian Motion</h2>
+
+          <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mt-0 mb-4">This is my first blog post (I
+            hope the first of many to come). In this post, I want to share with you my process of understanding Brownian
+            Motion, starting from the very basics and going all the way …</p>
+
+          <span class="read-more">Read article <i
+              class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i></span>
+        </a>
+
+      </div>
+
+      <div class="mt-10 flex justify-center">
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="max-w-5xl w-full mx-auto px-4">
+    <footer
+      class="text-sm text-center text-stone-400 dark:text-stone-500 border-t border-stone-200 dark:border-stone-800 py-8 mt-10">
+      <p class="mb-0 mt-0">© 2026 Álvaro Martín Ruiz</p>
+    </footer>
+
+  </div>
+
+</body>
+
 </html>

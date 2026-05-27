@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-us" class="m-auto  dark "><head>
-	<meta name="generator" content="Hugo 0.158.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  
-  <title>Alvaro Martin Ruiz | Portfolio</title>
-  
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-  />
-  <meta name="theme-color" content="" />
-  <meta name="description" content="Website title" />
-  <meta name="author" content="Darshan Baral" />
-  <link rel="icon" href="/favicon.png?v=3" type="image/png" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
-  />
+<html lang="en-us" class="m-auto  dark ">
 
-  
-  
+<head>
+  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <title>Alvaro Martin Ruiz | Portfolio</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="theme-color" content="#3b82f6" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="description"
+    content="Álvaro Martín Ruiz — final-year Data Science &amp; Telecommunications Engineering student at UC3M, building at the intersection of machine learning and financial markets." />
+  <meta name="author" content="Álvaro Martín Ruiz" />
+
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Alvaro Martin Ruiz | Portfolio" />
+  <meta property="og:title" content="Alvaro Martin Ruiz | Portfolio" />
+  <meta property="og:description"
+    content="Álvaro Martín Ruiz — final-year Data Science &amp; Telecommunications Engineering student at UC3M, building at the intersection of machine learning and financial markets." />
+  <meta property="og:url" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/images/profile_hu_4f48ac65d6ec3e82.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alvaro Martin Ruiz | Portfolio" />
+  <meta name="twitter:description"
+    content="Álvaro Martín Ruiz — final-year Data Science &amp; Telecommunications Engineering student at UC3M, building at the intersection of machine learning and financial markets." />
+  <meta name="twitter:image" content="http://localhost:1313/images/profile_hu_4f48ac65d6ec3e82.jpeg" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="/favicon.png?v=3" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono" />
+
+
+
   <link href="/main.css" rel="stylesheet" />
-  
+
 
   <style>
-     
     html {
       touch-action: manipulation;
       scroll-behavior: smooth;
@@ -48,7 +65,7 @@
         max-width: 100%;
       }
     }
-     
+
     .pagefind-ui__search-input {
       color: black;
       width: 100%;
@@ -56,9 +73,11 @@
       border-radius: 0.25em;
       border: 1px solid gray;
     }
+
     .pagefind-ui__search-clear {
       display: none;
     }
+
     .dark .pagefind-ui__search-input {
       color: white;
       background-color: #322d2d;
@@ -67,13 +86,16 @@
       border-radius: 0.25em;
       border: 1px solid gray;
     }
+
     .dark .pagefind-ui__search-input::placeholder {
       color: #8f8f8f;
     }
+
     .chevron {
       transition: 300ms linear rotate;
     }
-    .active > .chevron {
+
+    .active>.chevron {
       transform: rotate(90deg);
     }
   </style>
@@ -182,329 +204,374 @@
       }
     };
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const els = document.querySelectorAll(".reveal");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        els.forEach((e) => e.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((e) => io.observe(e));
+    });
+  </script>
 </head>
-<body class="h-screen p-2 m-auto max-w-4xl flex flex-col">
-    
-    <header
-  class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between"
->
-  <div>
-    <a class="nav-menu-item" href="http://localhost:1313/">Home</a>
-    <a class="nav-menu-item" href="/projects">Projects</a>
-    <a class="nav-menu-item" href="/blog">Blog</a>
-  </div>
-  <div>
-    <a class="mr-4" href="/search">
-      <i class="bi bi-search"></i>
-    </a>
-    <i
-      class="bi bi-brightness-high theme-toggle text-blue-500 hover:text-blue-700 dark:text-yellow-300 dark:hover:text-yellow-500 cursor-pointer text-lg mr-9 sm:mr-0"
-      onclick="toggleTheme()"
-    ></i>
-  </div>
-</header>
 
+<body class="min-h-screen flex flex-col dark:text-stone-50">
+  <div class="bg-fx" aria-hidden="true"></div>
 
-
-    
-    <main class="grow">
-<div class="grid grid-cols-1 md:grid-cols-5 gap-2 sm py-2">
-  <div class="col-span-2">
-    <div class="bg-gray-300 dark:bg-darker drop-shadow-md p-2 rounded-t-lg">
-      <div class="flex flex-col justify-center">
-        <div
-  class="w-full p-2 flex justify-center align-middle profile-photo-container"
->
-  <img
-    class="rounded-sm"
-    src="/images/profile.jpeg"
-    alt="Alvaro Martin Ruiz"
-  />
-</div>
-
-        <div class="px-2 text-center"><h1 class="mb-0">Alvaro Martin Ruiz</h1>
-<h2 class="mb-0"></h2>
-<h3 class="mb-4"></h3>
-<div class="mb-4 flex flex-wrap justify-center">
-  
-  <div class="mx-2">
-    <a class="text-2xl" href="mailto:alvarorz.martin@gmail.com">
-      <i class="mt-1 bi bi-envelope"></i>
-    </a>
-  </div>
-  
-  <div class="mx-2">
-    <a class="text-2xl" href="https://www.linkedin.com/in/alvaro-martin-ruiz-engineering/">
-      <i class="mt-1 bi bi-linkedin"></i>
-    </a>
-  </div>
-  
-  <div class="mx-2">
-    <a class="text-2xl" href="https://github.com/AlvaroMartinRuiz">
-      <i class="mt-1 bi bi-github"></i>
-    </a>
-  </div>
-  
-</div>
-</div>
-      </div>
-    </div>
-    <footer class="text-sm text-center border-t border-gray-500  bg-gray-200 dark:bg-dark rounded-b-lg py-2 ">
-  <p class="markdownify">powered by <a href="https://gohugo.io/">hugo</a></p>
-  <p >
-    <i>
-      <a href="https://github.com/darshanbaral/aafu">
-        aafu
+  <header
+    class="sticky top-0 z-50 w-full border-b border-stone-200 dark:border-stone-800 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex flex-row items-center justify-between">
+      <a href="http://localhost:1313/"
+        class="flex items-center gap-2 font-bold text-stone-900 dark:text-stone-100 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline tracking-tight transition-colors">
+        <span
+          class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-cyan-400 text-white text-sm font-bold">Á</span>
+        <span class="hidden sm:inline text-base">Álvaro Martín Ruiz</span>
       </a>
-    </i>
-    by
-    <a href="https://www.darshanbaral.com/">
-      darshan
-    </a>
-  </p>
+      <nav class="flex items-center gap-1">
 
-  
-</footer>
 
-  </div>
-  <div class="col-span-3 relative">
-    
-    
-    <div class="px-2">
-      <h2 class="accordion active">
-        
-        <p onclick="expandAccordion(this)" style="cursor: pointer">
-          <i class="bi bi-person"></i>
-          About Me</p>
-      </h2>
 
-      <div
-        class="panel overflow-hidden px-2 ml-2"
-        
-        
-        
-      >
-        <div class=""><div class="prose prose-sm md:prose-base dark:prose-invert max-w-none">
-  <p>Hi everyone! My name’s <strong>Álvaro Martín</strong>.</p>
-<p>I’m a university student with a curiosity for technology and financial markets. If you’re in a hurry, that’s a sufficient &ldquo;whoami&rdquo; summary.</p>
-<hr>
-<p><em><strong>Now, the extended version&hellip;</strong></em></p>
-<p>I am a final-year student pursuing a <strong>Dual Bachelor’s in Data Science and Telecommunication Technologies Engineering</strong> at Universidad Carlos III de Madrid. My goal is to be a perpetual learner, with a particular focus on <strong>Machine Learning</strong> and financial markets.</p>
-<p><strong>My experience includes:</strong></p>
-<ul>
-<li><strong>Santander CIB</strong>: Front-office automation.</li>
-<li><strong>NTT DATA</strong>: Software development.</li>
-<li><strong>UC3M</strong>: Research Assistant, testing ML models for suicide prevention.</li>
-</ul>
-<p>I love a good challenge, but what I enjoy most is solving those challenges alongside people smarter than me (which I believe is the fastest way to grow).</p>
-<p>If you like how all this sounds&hellip; <strong>Welcome to my space!</strong></p>
-
-</div>
-</div>
-      </div>
+        <a class="nav-link nav-link-active" href="http://localhost:1313/">About</a>
+        <a class="nav-link" href="/projects">Projects</a>
+        <a class="nav-link" href="/blog">Blog</a>
+        <button
+          class="ml-1 w-9 h-9 inline-flex items-center justify-center rounded-md text-stone-500 hover:text-stone-900 hover:bg-stone-100 dark:text-stone-400 dark:hover:text-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer bg-transparent border-0"
+          onclick="toggleTheme()" title="Toggle theme">
+          <i class="bi bi-brightness-high theme-toggle text-base"></i>
+        </button>
+      </nav>
     </div>
-    
-    <div class="px-2">
-      <h2 class="accordion">
-        
-        <p onclick="expandAccordion(this)" style="cursor: pointer">
-          <i class="bi bi-kanban"></i>
-          Projects</p>
-      </h2>
+  </header>
 
-      <div
-        class="panel overflow-hidden px-2 ml-2"
-        
-        
-      >
-        <div class=""><a href="/projects/" class="text-sm font-semibold mb-3 inline-block text-blue-500 hover:text-blue-600 transition" style="margin-bottom: 1rem; color: #3b82f6;">
-  View All Projects by Category →
-</a>
-<br/>
 
-<h4>
-  <a href="https://github.com/carolinalopezdelamadriz/MLA_FinalProject2025" target="_blank">News Fake Detection &amp; Clustering</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-03</span>
-</h4>
-<p class="markdownify indent-8">A machine learning project exploring if the authenticity of news articles can be determined using only textual content through NLP, classification models, and clustering.</p>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/two-stage-balanced-rf-amplifier" target="_blank">Balanced RF Amplifier</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-03</span>
-</h4>
-<p class="markdownify indent-8">Designed and simulated a two-stage balanced RF amplifier at 4.5 GHz using AWR Microwave Office, optimizing gain, noise figure, and stability.</p>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/optimization_project" target="_blank">Optimization Portfolio</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-03</span>
-</h4>
-<p class="markdownify indent-8">A collection of optimization algorithms, including TSP solutions with interactive map visualizations and finance-oriented portfolio risk/return simulations.</p>
+  <main class="grow w-full">
+    <div class="max-w-5xl mx-auto px-4 py-10 sm:py-14">
 
-<h4>
-  <a href="https://github.com/skill-gap-dev/skill_gap_analysis" target="_blank">Skill Gap Analysis</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-02</span>
-</h4>
-<p class="markdownify indent-8">A career-analytics platform that identifies the gap between a candidate&rsquo;s current skill set and the requirements of their target roles using NLP and graph-based analytics.</p>
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/delta_hedging_MSCI_world" target="_blank">Delta Hedging MSCI World</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2025-01</span>
-</h4>
-<p class="markdownify indent-8">Analyzed European options for arbitrage opportunities via Black-Scholes and developed a delta hedging strategy for the MSCI World Index.</p>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/reinforcement_learning_pacman" target="_blank">Reinforcement Learning Pacman</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-12</span>
-</h4>
-<p class="markdownify indent-8">Trained a Pac-Man agent using reinforcement learning techniques to play autonomously and maximize its score through self-play and strategic decision-making.</p>
+        <aside class="md:col-span-1 reveal">
+          <div
+            class="gradient-border md:sticky md:top-24 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm p-6 text-center">
+            <div class="relative inline-block mb-5">
+              <div class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-blue-500/50 to-cyan-400/30 blur-md">
+              </div>
+              <img class="relative w-36 h-36 rounded-full object-cover ring-4 ring-white dark:ring-stone-900 mx-auto"
+                src="/images/profile.jpeg" alt="Álvaro Martín Ruiz" />
+            </div>
+            <h1
+              class="text-2xl font-bold mt-0 mb-2 tracking-tight leading-tight bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Álvaro Martín Ruiz</h1>
+            <p class="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-2 mt-0 h-5">
+              <span id="role-rotator" class="role-rotator"
+                data-roles="Data Science|Machine Learning|Finance|Telecommunications Engineering">Data Scientist</span>
+            </p>
+            <p class="text-stone-500 dark:text-stone-400 text-sm mb-5 mt-0 flex items-center gap-1.5 justify-center">
+              <i class="bi bi-geo-alt"></i>Madrid, Spain
+            </p>
+            <div class="flex gap-2 justify-center items-center mb-4">
 
-<h4>
-  <a href="https://github.com/carlosfya/PoopApp" target="_blank">The Poop App</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-06</span>
-</h4>
-<p class="markdownify indent-8">An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues.</p>
+              <a href="mailto:alvarorz.martin@gmail.com" title="Email" class="social-btn">
+                <i class="bi bi-envelope"></i>
+              </a>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/predicting_heart_disease" target="_blank">Predicting Heart Disease</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-05</span>
-</h4>
-<p class="markdownify indent-8">This project aimed to predict heart failure using 11 cardiovascular-related features.</p>
+              <a href="https://www.linkedin.com/in/alvaro-martin-ruiz-engineering/" title="LinkedIn" class="social-btn">
+                <i class="bi bi-linkedin"></i>
+              </a>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/Line_Following_Robot" target="_blank">Line-Following Robot</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-05</span>
-</h4>
-<p class="markdownify indent-8">Developed an autonomous line-following robot using the STM32L152RCTX Discovery Board, following a 4-phase modular progression from GPIO control to advanced motor logic.</p>
+              <a href="https://github.com/AlvaroMartinRuiz" title="GitHub" class="social-btn">
+                <i class="bi bi-github"></i>
+              </a>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/titanic_survival_predictions" target="_blank">Titanic Survival Predictions</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-02</span>
-</h4>
-<p class="markdownify indent-8">Applied decision trees and random forests in R to predict Titanic survival, accompanied by exploratory data analysis reports.</p>
+            </div>
+            <a href="/Alvaro_Martin_CV.pdf" target="_blank" title="Download CV" class="cv-btn w-full justify-center">
+              <i class="bi bi-file-earmark-arrow-down"></i> Download CV
+            </a>
+            <div class="border-t border-stone-200 dark:border-stone-800 mt-6 pt-5 text-left">
+              <p class="skill-group-label">Core Skills</p>
+              <div class="flex flex-wrap gap-2">
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/Country_Development_and_Economic_Freedom" target="_blank">Country Development &amp; Economic Freedom</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2024-01</span>
-</h4>
-<p class="markdownify indent-8">Analyzed how economic freedom impacts a country&rsquo;s development using extensive preprocessing, EDA, and algorithms such as PCA, FA, and clustering.</p>
+                <span class="skill-tag">Python</span><span class="skill-tag">Machine Learning</span><span
+                  class="skill-tag">TensorFlow</span><span class="skill-tag">Scikit-learn</span><span
+                  class="skill-tag">SQL</span><span class="skill-tag">AI-first</span><span class="skill-tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </aside>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/Cooking_recipes_2023" target="_blank">Cooking Recipes Platform</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2023-10</span>
-</h4>
-<p class="markdownify indent-8">A full-stack web application built with Flask and SQLAlchemy that allows users to discover, share, and interact with cooking recipes.</p>
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/super_mario_bross" target="_blank">Super Mario Bros</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2023-05</span>
-</h4>
-<p class="markdownify indent-8">Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering.</p>
+        <div class="md:col-span-2 reveal" style="transition-delay: 0.12s">
+          <section
+            class="gradient-border rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm overflow-hidden divide-y divide-stone-200 dark:divide-stone-800">
 
-<h4>
-  <a href="https://github.com/AlvaroMartinRuiz/excel_dashboard_titanic" target="_blank">Excel Dashboard Titanic</a>
-  <span style="font-size: 0.8em; color: gray; font-weight: normal; margin-left: 0.5rem; font-family: monospace;">2023-01</span>
-</h4>
-<p class="markdownify indent-8">Built a comprehensive Excel dashboard to analyze Titanic passenger data using dynamic graphs and solver functionalities.</p>
 
-</div>
+            <div>
+              <div class="accordion active">
+                <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+                  <span class="flex items-center"><i class="acc-icon bi bi-person"></i><span
+                      class="acc-title">About</span></span>
+                  <i class="bi bi-chevron-right chevron"></i>
+                </button>
+              </div>
+              <div class="panel overflow-hidden">
+                <div class="panel-inner prose prose-stone dark:prose-invert prose-base max-w-none">
+                  <p>Hi everyone! My name’s <strong>Álvaro Martín</strong>.</p>
+                  <p>I’m a university student with a curiosity for technology and financial markets. If you’re in a
+                    hurry, that’s a sufficient &ldquo;whoami&rdquo; summary.</p>
+                  <hr>
+                  <p><em><strong>Now, the extended version&hellip;</strong></em></p>
+                  <p>I am a final-year student pursuing a <strong>Dual Bachelor’s in Data Science and Telecommunication
+                      Technologies Engineering</strong> at Universidad Carlos III de Madrid. My goal is to be a
+                    perpetual learner, with a particular focus on <strong>Machine Learning</strong> and financial
+                    markets.</p>
+                  <p><strong>My experience includes:</strong></p>
+                  <ul>
+                    <li><strong>Santander CIB</strong>: Front-office automation.</li>
+                    <li><strong>NTT DATA</strong>: Software development.</li>
+                    <li><strong>UC3M</strong>: Research Assistant, testing ML models for suicide prevention.</li>
+                  </ul>
+                  <p>I love a good challenge, but what I enjoy most is solving those challenges alongside people smarter
+                    than me (which I believe is the fastest way to grow).</p>
+                  <p>If you like how all this sounds&hellip; <strong>Welcome to my space!</strong></p>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div>
+              <div class="accordion">
+                <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+                  <span class="flex items-center"><i class="acc-icon bi bi-rocket-takeoff"></i><span
+                      class="acc-title">Projects</span></span>
+                  <i class="bi bi-chevron-right chevron"></i>
+                </button>
+              </div>
+              <div class="panel overflow-hidden">
+                <div class="panel-inner">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+
+
+                    <a href="/work/skill-gap-analysis/" class="project-card group no-underline hover:no-underline">
+                      <span class="text-xs text-blue-600 dark:text-blue-400 font-mono mb-2 block">Machine Learning &amp;
+                        AI</span>
+                      <h3
+                        class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                        Skill Gap Analysis</h3>
+                      <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">A
+                        career-analytics platform that identifies the gap between a candidate&#39;s current skill set
+                        and the requirements of their target roles using NLP and graph-based analytics.
+                      </p>
+
+                      <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="stack-badge">Python</span><span class="stack-badge">NLP</span><span
+                          class="stack-badge">Graph Analytics</span>
+                      </div>
+
+                    </a>
+
+
+
+                    <a href="/work/pinns-options-pricing/" class="project-card group no-underline hover:no-underline">
+                      <span class="text-xs text-blue-600 dark:text-blue-400 font-mono mb-2 block">Finance</span>
+                      <h3
+                        class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                        PINNs Options Pricing</h3>
+                      <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">Prices
+                        European options using Physics-Informed Neural Networks — the model enforces the Black-Scholes
+                        PDE as a hard constraint during training, combining deep learning with financial theory.
+                      </p>
+
+                      <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="stack-badge">Python</span><span class="stack-badge">TensorFlow</span><span
+                          class="stack-badge">PINNs</span>
+                      </div>
+
+                    </a>
+
+
+
+                    <a href="/work/super-mario-bros/" class="project-card group no-underline hover:no-underline">
+                      <span class="text-xs text-blue-600 dark:text-blue-400 font-mono mb-2 block">Game
+                        Development</span>
+                      <h3
+                        class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                        Super Mario Bros</h3>
+                      <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">Programmed a
+                        2D Super Mario Bros game in Python, featuring custom classes and sprite rendering.
+                      </p>
+
+                      <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="stack-badge">Python</span><span class="stack-badge">Pygame</span><span
+                          class="stack-badge">OOP</span>
+                      </div>
+
+                    </a>
+
+                  </div>
+                  <a href="/projects"
+                    class="inline-block mt-4 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline no-underline transition-colors">
+                    See all projects →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <div>
+              <div class="accordion">
+                <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+                  <span class="flex items-center"><i class="acc-icon bi bi-briefcase"></i><span
+                      class="acc-title">Experience</span></span>
+                  <i class="bi bi-chevron-right chevron"></i>
+                </button>
+              </div>
+              <div class="panel overflow-hidden">
+                <div class="panel-inner">
+                  <ul class="timeline">
+                    <li>
+                      <p class="role">Scientific &amp; Technical Staff · <span class="org">UC3M</span></p>
+                      <p class="when">Sep 2025 – Present</p>
+                      <p class="what">ML research for clinical suicide prevention — Gaussian Mixture Models and Bayesian
+                        Online Change-Point Detection on 300+ high-risk patients.</p>
+                    </li>
+                    <li>
+                      <p class="role">Front-Office Automation Intern · <span class="org">Santander CIB</span></p>
+                      <p class="when">Jun – Aug 2025</p>
+                      <p class="what">Automated trading-desk workflows and PnL reporting for TRS, Repo and SSA bond
+                        positions, saving the desk 30+ minutes of manual work daily.</p>
+                    </li>
+                    <li>
+                      <p class="role">Software Development Intern · <span class="org">NTT DATA</span></p>
+                      <p class="when">Jun – Oct 2024</p>
+                      <p class="what">Python automation for a legacy accounting migration, with SQL-based impact
+                        analysis.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+            <div>
+              <div class="accordion">
+                <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+                  <span class="flex items-center"><i class="acc-icon bi bi-mortarboard"></i><span
+                      class="acc-title">Education</span></span>
+                  <i class="bi bi-chevron-right chevron"></i>
+                </button>
+              </div>
+              <div class="panel overflow-hidden">
+                <div class="panel-inner">
+                  <ul class="timeline">
+                    <li>
+                      <p class="role">Dual B.S. in Data Science &amp; Telecommunications Engineering · <span
+                          class="org">UC3M</span></p>
+                      <p class="when">2021 – 2026 · finishing one year ahead of schedule</p>
+                      <p class="what">Finance minor covering Options, Futures, Swaps and the Greeks.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </div>
+
       </div>
+
+
+
+
+      <section class="reveal" style="transition-delay: 0.24s">
+        <div class="flex items-baseline justify-between mb-6">
+          <h2 class="section-label mb-0">Latest from the Blog</h2>
+          <a href="/blog"
+            class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline no-underline transition-colors">
+            All posts →
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+
+          <a href="/blog/stochastic_calculus/" class="project-card group no-underline hover:no-underline">
+            <div class="flex items-center gap-2 text-xs font-mono text-stone-400 dark:text-stone-500 mb-2">
+              <span class="inline-flex items-center gap-1"><i class="bi bi-calendar3"></i>Apr 10, 2026</span>
+              <span class="text-stone-300 dark:text-stone-600">·</span><span>25
+                min</span>
+            </div>
+            <h3
+              class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+              Understanding Itô&#39;s Calculus: Part 1</h3>
+
+            <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">This post will explore
+              the fundamentals of Itô Calculus, starting from almost zero. It is intended …</p>
+
+            <span class="read-more mt-3">Read <i
+                class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i></span>
+          </a>
+
+          <a href="/blog/brownian_motion/" class="project-card group no-underline hover:no-underline">
+            <div class="flex items-center gap-2 text-xs font-mono text-stone-400 dark:text-stone-500 mb-2">
+              <span class="inline-flex items-center gap-1"><i class="bi bi-calendar3"></i>Feb 25, 2026</span>
+              <span class="text-stone-300 dark:text-stone-600">·</span><span>15
+                min</span>
+            </div>
+            <h3
+              class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+              Understanding Brownian Motion</h3>
+
+            <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">This is my first blog
+              post (I hope the first of many to come). In this post, I want to share with …</p>
+
+            <span class="read-more mt-3">Read <i
+                class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i></span>
+          </a>
+
+        </div>
+      </section>
+
+
     </div>
-    
-    <div class="px-2">
-      <h2 class="accordion">
-        
-        <p onclick="expandAccordion(this)" style="cursor: pointer">
-          <i class="bi bi-file-earmark-pdf"></i>
-          Curriculum Vitae</p>
-      </h2>
 
-      <div
-        class="panel overflow-hidden px-2 ml-2"
-        
-        
-      >
-        <div class=""><div class="pdf-container my-4" style="text-align: center;">
-  <style>
-    .download-btn {
-        display: inline-block;
-        background-color: #2563eb;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.375rem;
-        text-decoration: none;
-        font-weight: 500;
-        transition: background-color 0.2s;
-        margin-top: 1rem;
-    }
-    .download-btn:hover {
-        background-color: #1d4ed8;
-    }
-  </style>
+    <script>
+      (function () {
+        const el = document.getElementById("role-rotator");
+        if (!el) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const roles = (el.dataset.roles || "").split("|").filter(Boolean);
+        if (roles.length < 2) return;
+        let i = 0;
+        setInterval(() => {
+          i = (i + 1) % roles.length;
+          el.style.opacity = "0";
+          setTimeout(() => {
+            el.textContent = roles[i];
+            el.style.opacity = "1";
+          }, 280);
+        }, 2600);
+      })();
+    </script>
 
-  <iframe src="/Alvaro_Martin_CV.pdf#toolbar=1&view=FitH" width="100%" height="800px" style="border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-    <p class="text-gray-600 dark:text-gray-400">Your browser does not support inline PDFs. 
-      <a href="/Alvaro_Martin_CV.pdf" class="text-blue-500 hover:underline">Download the PDF</a> instead.
-    </p>
-  </iframe>
-  
-  <div class="mt-4">
-    <a href="/Alvaro_Martin_CV.pdf" download="Alvaro_Martin_CV.pdf" class="download-btn">
-      <i class="bi bi-download mr-2"></i> Download CV (PDF)
-    </a>
-  </div>
-</div>
-</div>
-      </div>
-    </div>
-    
-    <div class="px-2">
-      <h2 class="accordion">
-        
-        <p onclick="expandAccordion(this)" style="cursor: pointer">
-          <i class="bi bi-journal-text"></i>
-          Blog</p>
-      </h2>
+  </main>
 
-      <div
-        class="panel overflow-hidden px-2 ml-2"
-        
-        
-      >
-        <div class=""><ul class="list-disc ml-6 mt-2">
-  
-  <li class="mb-2">
-    <a href="/blog/stochastic_calculus/" class="text-blue-500 hover:underline dark:text-blue-400">
-      Understanding Stochastic Calculus
-    </a>
-    <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">
-      Mar 24, 2026
-    </span>
-    
-    <p class="text-sm mt-1 text-gray-700 dark:text-gray-300">This post will explore the fundamentals of Stochastic Calculus, starting from almost zero. It is …</p>
-    
-  </li>
-  
-  <li class="mb-2">
-    <a href="/blog/brownian_motion/" class="text-blue-500 hover:underline dark:text-blue-400">
-      Understanding Brownian Motion
-    </a>
-    <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">
-      Feb 25, 2026
-    </span>
-    
-    <p class="text-sm mt-1 text-gray-700 dark:text-gray-300">This is my first blog post (I hope the first of many to come). In this post, I want to share with …</p>
-    
-  </li>
-  
-</ul>
-</div>
-      </div>
-    </div>
-    
-  </div>
-</div>
+</body>
 
-    </main>
-    
-  </body>
 </html>
