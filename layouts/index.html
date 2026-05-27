@@ -1,0 +1,201 @@
+{{ define "main" }}
+<div class="max-w-5xl mx-auto px-4 py-10 sm:py-14">
+
+  <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+    {{/* Profile card — sticky on desktop */}}
+    <aside class="md:col-span-1 reveal">
+      <div class="gradient-border md:sticky md:top-24 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm p-6 text-center">
+        <div class="relative inline-block mb-5">
+          <div class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-blue-500/50 to-cyan-400/30 blur-md"></div>
+          <img
+            class="relative w-36 h-36 rounded-full object-cover ring-4 ring-white dark:ring-stone-900 mx-auto"
+            src="{{ `images` | relURL }}/{{ .Site.Data.profile.photo }}"
+            alt="{{ .Site.Data.profile.name }}"
+          />
+        </div>
+        <h1 class="text-2xl font-bold mt-0 mb-2 tracking-tight leading-tight bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent">{{ .Site.Data.profile.name }}</h1>
+        <p class="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-2 mt-0 h-5">
+          <span id="role-rotator" class="role-rotator" data-roles="Data Scientist|ML Engineer|Quant Researcher|Telecomms Engineer">Data Scientist</span>
+        </p>
+        <p class="text-stone-500 dark:text-stone-400 text-sm mb-5 mt-0 flex items-center gap-1.5 justify-center">
+          <i class="bi bi-geo-alt"></i>{{ .Site.Data.profile.location }}
+        </p>
+        <div class="flex gap-2 justify-center items-center mb-4">
+          {{ range .Site.Data.social }}
+          <a href="{{ .url }}" title="{{ .title }}" class="social-btn">
+            <i class="{{ .icon }}"></i>
+          </a>
+          {{ end }}
+        </div>
+        <a href="/Alvaro_Martin_CV.pdf" target="_blank" title="Download CV" class="cv-btn w-full justify-center">
+          <i class="bi bi-file-earmark-arrow-down"></i> Download CV
+        </a>
+        <div class="border-t border-stone-200 dark:border-stone-800 mt-6 pt-5 text-left">
+          <p class="skill-group-label">Core Skills</p>
+          <div class="flex flex-wrap gap-2">
+            {{ $core := slice "Python" "Machine Learning" "TensorFlow" "Scikit-learn" "SQL" "Quantitative Finance" }}
+            {{ range $core }}<span class="skill-tag">{{ . }}</span>{{ end }}
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    {{/* Accordion — quick scan of the essentials */}}
+    <div class="md:col-span-2 reveal" style="transition-delay: 0.12s">
+      <section class="gradient-border rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm overflow-hidden divide-y divide-stone-200 dark:divide-stone-800">
+
+        {{/* About */}}
+        <div>
+          <div class="accordion active">
+            <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+              <span class="flex items-center"><i class="acc-icon bi bi-person"></i><span class="acc-title">About</span></span>
+              <i class="bi bi-chevron-right chevron"></i>
+            </button>
+          </div>
+          <div class="panel overflow-hidden">
+            <div class="panel-inner prose prose-stone dark:prose-invert prose-base max-w-none">
+              {{ .Site.Data.about_me.description | markdownify }}
+            </div>
+          </div>
+        </div>
+
+        {{/* Projects */}}
+        <div>
+          <div class="accordion">
+            <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+              <span class="flex items-center"><i class="acc-icon bi bi-rocket-takeoff"></i><span class="acc-title">Projects</span></span>
+              <i class="bi bi-chevron-right chevron"></i>
+            </button>
+          </div>
+          <div class="panel overflow-hidden">
+            <div class="panel-inner">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {{ range sort (where .Site.Data.projects.list "featured" true) "featured_order" "asc" }}
+                {{ $href := .url }}{{ $external := true }}
+                {{ with .page }}{{ $href = . | relURL }}{{ $external = false }}{{ end }}
+                <a href="{{ $href }}"{{ if $external }} target="_blank"{{ end }} class="project-card group no-underline hover:no-underline">
+                  <span class="text-xs text-blue-600 dark:text-blue-400 font-mono mb-2 block">{{ .category }}</span>
+                  <h3 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">{{ .title }}</h3>
+                  <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">{{ .description }}</p>
+                  {{ with .stack }}
+                  <div class="flex flex-wrap gap-1.5 mt-3">
+                    {{ range . }}<span class="stack-badge">{{ . }}</span>{{ end }}
+                  </div>
+                  {{ end }}
+                </a>
+                {{ end }}
+              </div>
+              <a href="{{ `projects` | relURL }}" class="inline-block mt-4 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline no-underline transition-colors">
+                See all projects →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {{/* Experience */}}
+        <div>
+          <div class="accordion">
+            <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+              <span class="flex items-center"><i class="acc-icon bi bi-briefcase"></i><span class="acc-title">Experience</span></span>
+              <i class="bi bi-chevron-right chevron"></i>
+            </button>
+          </div>
+          <div class="panel overflow-hidden">
+            <div class="panel-inner">
+              <ul class="timeline">
+                <li>
+                  <p class="role">Scientific &amp; Technical Staff · <span class="org">UC3M</span></p>
+                  <p class="when">Sep 2025 – Present</p>
+                  <p class="what">ML research for clinical suicide prevention — Gaussian Mixture Models and Bayesian Online Change-Point Detection on 300+ high-risk patients.</p>
+                </li>
+                <li>
+                  <p class="role">Front-Office Automation Intern · <span class="org">Santander CIB</span></p>
+                  <p class="when">Jun – Aug 2025</p>
+                  <p class="what">Automated trading-desk workflows and PnL reporting for TRS, Repo and SSA bond positions, saving the desk 30+ minutes of manual work daily.</p>
+                </li>
+                <li>
+                  <p class="role">Software Development Intern · <span class="org">NTT DATA</span></p>
+                  <p class="when">Jun – Oct 2024</p>
+                  <p class="what">Python automation for a legacy accounting migration, with SQL-based impact analysis.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {{/* Education */}}
+        <div>
+          <div class="accordion">
+            <button type="button" onclick="expandAccordion(this)" class="accordion-header">
+              <span class="flex items-center"><i class="acc-icon bi bi-mortarboard"></i><span class="acc-title">Education</span></span>
+              <i class="bi bi-chevron-right chevron"></i>
+            </button>
+          </div>
+          <div class="panel overflow-hidden">
+            <div class="panel-inner">
+              <ul class="timeline">
+                <li>
+                  <p class="role">Dual B.S. in Data Science &amp; Telecommunications Engineering · <span class="org">UC3M</span></p>
+                  <p class="when">2021 – 2026 · finishing one year ahead of schedule</p>
+                  <p class="what">Finance minor covering Options, Futures, Swaps and the Greeks.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </div>
+
+  {{/* Latest from the blog */}}
+  {{ $posts := where .Site.RegularPages "Section" "blog" }}
+  {{ with $posts }}
+  <section class="reveal" style="transition-delay: 0.24s">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="section-label mb-0">Latest from the Blog</h2>
+      <a href="{{ `blog` | relURL }}" class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline no-underline transition-colors">
+        All posts →
+      </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      {{ range first 3 . }}
+      <a href="{{ .RelPermalink }}" class="project-card group no-underline hover:no-underline">
+        <div class="flex items-center gap-2 text-xs font-mono text-stone-400 dark:text-stone-500 mb-2">
+          <span class="inline-flex items-center gap-1"><i class="bi bi-calendar3"></i>{{ .Date.Format "Jan 2, 2006" }}</span>
+          {{ if gt .ReadingTime 0 }}<span class="text-stone-300 dark:text-stone-600">·</span><span>{{ .ReadingTime }} min</span>{{ end }}
+        </div>
+        <h3 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">{{ .Title }}</h3>
+        {{ with .Summary }}
+        <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">{{ . | plainify | truncate 100 }}</p>
+        {{ end }}
+        <span class="read-more mt-3">Read <i class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i></span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+</div>
+
+<script>
+  (function () {
+    const el = document.getElementById("role-rotator");
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const roles = (el.dataset.roles || "").split("|").filter(Boolean);
+    if (roles.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % roles.length;
+      el.style.opacity = "0";
+      setTimeout(() => {
+        el.textContent = roles[i];
+        el.style.opacity = "1";
+      }, 280);
+    }, 2600);
+  })();
+</script>
+{{ end }}

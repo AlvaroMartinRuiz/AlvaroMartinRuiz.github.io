@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="max-w-5xl mx-auto px-4 py-12 sm:py-16">
+  <a href="{{ .Site.BaseURL }}" class="inline-flex items-center gap-1.5 text-sm text-stone-500 dark:text-stone-400 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline transition-colors mb-8">
+    <i class="bi bi-arrow-left"></i> Back to home
+  </a>
+  <h1 class="text-3xl sm:text-4xl font-bold mb-10 mt-0 tracking-tight">{{ .Title }}</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    {{ range .Pages.ByWeight }}
+    <a href="{{ .RelPermalink }}" class="project-card group no-underline hover:no-underline">
+      <span class="text-xs text-blue-600 dark:text-blue-400 font-mono mb-2 block">{{ .Params.category }}</span>
+      <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">{{ .Title }}</h2>
+      <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">{{ .Params.summary }}</p>
+      {{ with .Params.stack }}
+      <div class="flex flex-wrap gap-1.5 mt-3">
+        {{ range . }}<span class="stack-badge">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

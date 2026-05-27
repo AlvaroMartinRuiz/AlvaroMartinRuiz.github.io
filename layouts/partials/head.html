@@ -1,4 +1,5 @@
 <head>
+  <script>document.documentElement.classList.add("js");</script>
   {{ if .IsHome }}
   <title>{{ .Site.Title }}</title>
   {{ else }}
@@ -9,10 +10,34 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
   />
-  <meta name="theme-color" content="" />
-  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta name="theme-color" content="#3b82f6" />
+  {{ $desc := .Site.Params.description }}
+  {{ with .Description }}{{ $desc = . }}{{ else }}{{ with .Summary }}{{ $desc = $.Summary | plainify }}{{ end }}{{ end }}
+  {{ $ogTitle := cond .IsHome .Site.Title .Title }}
+  {{ $ogImage := (printf "images/%s" .Site.Data.profile.photo) | absURL }}
+  {{ $photo := resources.Get "images/profile.jpeg" }}
+  {{ if $photo }}
+    {{ $card := ($photo.Process "fill 1200x630 smart").Filter (images.Brightness -42) (images.Text .Site.Data.profile.name (dict "x" 64 "y" 210 "size" 80 "color" "#ffffff")) (images.Text .Site.Data.profile.tagline (dict "x" 66 "y" 320 "size" 34 "color" "#bfdbfe")) (images.Text "alvaromartinruiz.github.io" (dict "x" 66 "y" 540 "size" 26 "color" "#d6d3d1")) }}
+    {{ $ogImage = $card.Permalink }}
+  {{ end }}
+  {{ with .Params.cover }}{{ $ogImage = . | absURL }}{{ end }}
+  <meta name="description" content="{{ $desc }}" />
   <meta name="author" content="{{ .Site.Params.author }}" />
-  <link rel="icon" href="{{ `favicon.png` | relURL }}?v=3" type="image/png" />
+
+  {{/* Open Graph / Twitter share preview */}}
+  <meta property="og:type" content="{{ cond .IsHome `website` `article` }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:title" content="{{ $ogTitle }}" />
+  <meta property="og:description" content="{{ $desc }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:image" content="{{ $ogImage }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ $ogTitle }}" />
+  <meta name="twitter:description" content="{{ $desc }}" />
+  <meta name="twitter:image" content="{{ $ogImage }}" />
+
+  <link rel="icon" type="image/svg+xml" href="{{ `favicon.svg` | relURL }}" />
+  <link rel="alternate icon" type="image/png" href="{{ `favicon.png` | relURL }}?v=3" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -189,5 +214,28 @@
           defaultActivePanel.nextElementSibling.scrollHeight + "px";
       }
     };
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const els = document.querySelectorAll(".reveal");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        els.forEach((e) => e.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((e) => io.observe(e));
+    });
   </script>
 </head>

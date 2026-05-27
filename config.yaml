@@ -6,11 +6,35 @@ title: Alvaro Martin Ruiz | Portfolio
 # Uncomment below to use aafu as hugo theme. See instructions in README.md
 theme: aafu
 ignoreFiles: ["markdown_syntax/.*", "post_3\\.md"]
+disableHugoGeneratorInject: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ["$$", "$$"]
+            - ["\\[", "\\]"]
+          inline:
+            - ["$", "$"]
+            - ["\\(", "\\)"]
+  highlight:
+    style: github-dark
+    noClasses: true
+    lineNos: false
+    tabWidth: 2
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
 
 params:
-  author: Darshan Baral
-  description: Website title
-  copyright: powered by [hugo](https://gohugo.io/)
+  author: Álvaro Martín Ruiz
+  description: "Álvaro Martín Ruiz — final-year Data Science & Telecommunications Engineering student at UC3M, building at the intersection of machine learning and financial markets."
+  copyright: ""
   theme:
     mainTheme: dark
     showAttribute: true

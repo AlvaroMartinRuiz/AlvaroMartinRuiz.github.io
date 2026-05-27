@@ -1,19 +1,24 @@
-<header
-  class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between"
->
-  <div>
-    <a class="nav-menu-item" href="{{ .Site.BaseURL }}">Home</a>
-    <a class="nav-menu-item" href="{{ `projects` | relURL }}">Projects</a>
-    <a class="nav-menu-item" href="{{ `blog` | relURL }}">Blog</a>
-  </div>
-  <div>
-    <a class="mr-4" href="{{ `search` | relURL }}">
-      <i class="bi bi-search"></i>
+<header class="sticky top-0 z-50 w-full border-b border-stone-200 dark:border-stone-800 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md">
+  <div class="max-w-5xl mx-auto px-4 h-16 flex flex-row items-center justify-between">
+    <a href="{{ .Site.BaseURL }}" class="flex items-center gap-2 font-bold text-stone-900 dark:text-stone-100 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline tracking-tight transition-colors">
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-cyan-400 text-white text-sm font-bold">Á</span>
+      <span class="hidden sm:inline text-base">Álvaro Martín Ruiz</span>
     </a>
-    <i
-      class="bi bi-brightness-high theme-toggle text-blue-500 hover:text-blue-700 dark:text-yellow-300 dark:hover:text-yellow-500 cursor-pointer text-lg mr-9 sm:mr-0"
-      onclick="toggleTheme()"
-    ></i>
+    <nav class="flex items-center gap-1">
+      {{ $isHome := .IsHome }}
+      {{ $isBlog := or (eq .Section "blog") (strings.HasPrefix .RelPermalink "/blog/") }}
+      {{ $isProjects := strings.HasPrefix .RelPermalink "/projects/" }}
+      <a class="nav-link{{ if $isHome }} nav-link-active{{ end }}" href="{{ .Site.BaseURL }}">About</a>
+      <a class="nav-link{{ if $isProjects }} nav-link-active{{ end }}" href="{{ `projects` | relURL }}">Projects</a>
+      <a class="nav-link{{ if $isBlog }} nav-link-active{{ end }}" href="{{ `blog` | relURL }}">Blog</a>
+      <button
+        class="ml-1 w-9 h-9 inline-flex items-center justify-center rounded-md text-stone-500 hover:text-stone-900 hover:bg-stone-100 dark:text-stone-400 dark:hover:text-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer bg-transparent border-0"
+        onclick="toggleTheme()"
+        title="Toggle theme"
+      >
+        <i class="bi bi-brightness-high theme-toggle text-base"></i>
+      </button>
+    </nav>
   </div>
 </header>
 

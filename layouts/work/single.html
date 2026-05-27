@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="max-w-3xl mx-auto px-4 py-12 reveal">
+
+  <a href="{{ .Site.BaseURL }}" class="inline-flex items-center gap-1.5 text-sm text-stone-500 dark:text-stone-400 hover:text-blue-500 dark:hover:text-blue-400 no-underline hover:no-underline transition-colors mb-8">
+    <i class="bi bi-arrow-left"></i> Back to home
+  </a>
+
+  {{ with .Params.category }}<p class="text-xs font-mono text-blue-600 dark:text-blue-400 mb-2 mt-0">{{ . }}</p>{{ end }}
+  <h1 class="text-3xl sm:text-4xl font-bold mt-0 mb-3 tracking-tight">{{ .Title }}</h1>
+
+  {{ with .Params.stack }}
+  <div class="flex flex-wrap gap-1.5 mb-6">
+    {{ range . }}<span class="stack-badge">{{ . }}</span>{{ end }}
+  </div>
+  {{ end }}
+
+  <div class="flex flex-wrap gap-3 mb-10">
+    {{ with .Params.github }}
+    <a href="{{ . }}" target="_blank" class="cv-btn"><i class="bi bi-github"></i> View on GitHub</a>
+    {{ end }}
+    {{ with .Params.demo }}
+    <a href="{{ . }}" target="_blank" class="social-btn-wide"><i class="bi bi-play-circle"></i> Live demo</a>
+    {{ end }}
+  </div>
+
+  <div class="prose prose-stone dark:prose-invert prose-base max-w-none">
+    {{ .Content }}
+  </div>
+
+</div>
+{{ end }}

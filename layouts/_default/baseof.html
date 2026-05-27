@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" class="m-auto {{ if .Site.Params.theme.mainTheme }} {{ .Site.Params.theme.mainTheme }} {{ end }}">
+  {{- partial "head.html" . -}}
+  <body class="min-h-screen flex flex-col dark:text-stone-50">
+    <div class="bg-fx" aria-hidden="true"></div>
+    {{ if not .Site.Params.theme.singlePage }}
+    {{ partial "header" . }}
+    {{ end }}
+    <main class="grow w-full">
+      {{- block "main" . }}
+      {{- end }}
+    </main>
+    {{ if and (not .IsHome) (not .Site.Params.theme.singlepage) }}
+    <div class="max-w-5xl w-full mx-auto px-4">
+      {{ partial "footer" . }}
+    </div>
+    {{ end }}
+  </body>
+</html>

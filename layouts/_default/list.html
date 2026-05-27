@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="max-w-3xl mx-auto px-4 py-12 sm:py-16">
+  <h1 class="text-3xl sm:text-4xl font-bold mb-3 mt-0 tracking-tight">{{ .Title }}</h1>
+  <p class="text-stone-500 dark:text-stone-400 mb-10 mt-0">Notes on stochastic calculus, quantitative finance and the things I'm learning along the way.</p>
+
+  <div class="grid gap-5">
+    {{ range (.Paginator 10).Pages }}
+    {{ $post := . }}
+    <a href="{{ .Permalink | relURL }}" class="blog-card group no-underline hover:no-underline reveal">
+      {{ with .Params.cover }}
+      <img src="{{ . | relURL }}" alt="{{ $post.Title }}" class="w-full h-44 object-cover rounded-xl ring-1 ring-stone-200 dark:ring-stone-800 mb-4" />
+      {{ end }}
+      <div class="flex items-center gap-3 text-xs font-mono text-stone-400 dark:text-stone-500 mb-2">
+        <span class="inline-flex items-center gap-1.5"><i class="bi bi-calendar3"></i>{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ if gt .ReadingTime 0 }}<span class="text-stone-300 dark:text-stone-600">·</span><span class="inline-flex items-center gap-1.5"><i class="bi bi-clock"></i>{{ .ReadingTime }} min read</span>{{ end }}
+      </div>
+      <h2 class="text-xl font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors mt-0 mb-2 leading-snug">{{ .Title }}</h2>
+      {{ if .Summary }}
+      <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mt-0 mb-4">{{ .Summary | plainify | truncate 200 }}</p>
+      {{ end }}
+      <span class="read-more">Read article <i class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i></span>
+    </a>
+    {{ end }}
+  </div>
+
+  <div class="mt-10 flex justify-center">
+    {{ template "_internal/pagination.html" (dict "page" . "format" "terse") }}
+  </div>
+</div>
+{{ end }}

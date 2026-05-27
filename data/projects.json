@@ -36,7 +36,11 @@
       "url": "https://github.com/AlvaroMartinRuiz/super_mario_bross",
       "description": "Programmed a 2D Super Mario Bros game in Python, featuring custom classes and sprite rendering.",
       "date": "2021-11",
-      "category": "Game Development"
+      "category": "Game Development",
+      "featured": true,
+      "featured_order": 3,
+      "stack": ["Python", "Pygame", "OOP"],
+      "page": "/work/super-mario-bros/"
     },
     {
       "title": "Titanic Survival Predictions",
@@ -64,7 +68,22 @@
       "url": "https://github.com/skill-gap-dev/skill_gap_analysis",
       "description": "A career-analytics platform that identifies the gap between a candidate's current skill set and the requirements of their target roles using NLP and graph-based analytics.",
       "date": "2026-12",
-      "category": "Machine Learning & AI"
+      "category": "Machine Learning & AI",
+      "featured": true,
+      "featured_order": 1,
+      "stack": ["Python", "NLP", "Graph Analytics"],
+      "page": "/work/skill-gap-analysis/"
+    },
+    {
+      "title": "PINNs Options Pricing",
+      "url": "https://github.com/AlvaroMartinRuiz/PINNs_Options_Pricing",
+      "description": "Prices European options using Physics-Informed Neural Networks — the model enforces the Black-Scholes PDE as a hard constraint during training, combining deep learning with financial theory.",
+      "date": "2025-06",
+      "category": "Finance",
+      "featured": true,
+      "featured_order": 2,
+      "stack": ["Python", "TensorFlow", "PINNs"],
+      "page": "/work/pinns-options-pricing/"
     },
     {
       "title": "News Fake Detection & Clustering",
