@@ -39,7 +39,11 @@
       "category": "Game Development",
       "featured": true,
       "featured_order": 3,
-      "stack": ["Python", "Pygame", "OOP"],
+      "stack": [
+        "Python",
+        "Pygame",
+        "OOP"
+      ],
       "page": "/work/super-mario-bros/"
     },
     {
@@ -71,7 +75,11 @@
       "category": "Machine Learning & AI",
       "featured": true,
       "featured_order": 1,
-      "stack": ["Python", "NLP", "Graph Analytics"],
+      "stack": [
+        "Python",
+        "NLP",
+        "Graph Analytics"
+      ],
       "page": "/work/skill-gap-analysis/"
     },
     {
@@ -82,7 +90,11 @@
       "category": "Finance",
       "featured": true,
       "featured_order": 2,
-      "stack": ["Python", "TensorFlow", "PINNs"],
+      "stack": [
+        "Python",
+        "TensorFlow",
+        "PINNs"
+      ],
       "page": "/work/pinns-options-pricing/"
     },
     {
@@ -94,7 +106,7 @@
     },
     {
       "title": "The Poop App",
-      "url": "https://github.com/carlosfya/PoopApp",
+      "url": "https://github.com/AlvaroMartinRuiz/PoopApp",
       "description": "An Android application developed in Kotlin that allows users to log bathroom visits, track digestive habits, and engage with friends through gamified social leagues.",
       "date": "2025-04",
       "category": "App & Web Development"
