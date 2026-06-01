@@ -2,7 +2,7 @@
 title: "Understanding Itô's Calculus: Part 1"
 date: 2026-04-10T11:15:00+01:00
 draft: false
-readingMinutes: 20
+readingMinutes: 30
 ---
 
 This post will explore the fundamentals of Itô Calculus, starting from almost zero. It is intended to be explained in a way that is easy to understand for someone with a basic knowledge of probability and calculus. However, I truly recommend you to have a look at my post on Brownian Motion first, as it will help you to better understand the concepts in this post.
