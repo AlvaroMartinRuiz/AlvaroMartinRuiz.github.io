@@ -12,8 +12,9 @@
   {{ end }}
 
   <h1 class="text-3xl sm:text-4xl font-bold mt-0 mb-3 tracking-tight">{{ .Title }}</h1>
+  {{ $rt := .Params.readingMinutes | default .ReadingTime }}
   <p class="text-xs font-mono text-stone-400 dark:text-stone-500 mb-8 mt-0">
-    {{ .Date.Format "January 2, 2006" }}{{ if gt .ReadingTime 0 }} · {{ .ReadingTime }} min read{{ end }}
+    {{ .Date.Format "January 2, 2006" }}{{ if gt $rt 0 }} · {{ $rt }} min read{{ end }}
   </p>
 
   {{ if gt (len .Fragments.Headings) 1 }}

@@ -178,11 +178,12 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
       {{ range first 3 . }}
+      {{ $rt := .Params.readingMinutes | default .ReadingTime }}
       <a href="{{ .RelPermalink }}" class="project-card group no-underline hover:no-underline">
         <div class="flex items-center gap-2 text-xs font-mono text-stone-400 dark:text-stone-500 mb-2">
           <span class="inline-flex items-center gap-1"><i class="bi bi-calendar3"></i>{{ .Date.Format "Jan 2, 2006"
             }}</span>
-          {{ if gt .ReadingTime 0 }}<span class="text-stone-300 dark:text-stone-600">·</span><span>{{ .ReadingTime }}
+          {{ if gt $rt 0 }}<span class="text-stone-300 dark:text-stone-600">·</span><span>{{ $rt }}
             min</span>{{ end }}
         </div>
         <h3
