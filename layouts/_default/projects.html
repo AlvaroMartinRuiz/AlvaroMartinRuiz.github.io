@@ -28,14 +28,14 @@
 
   <div id="proj-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
     {{ range sort $projects "date" "desc" }}
-    {{ $href := .url }}{{ $external := true }}
-    {{ with .page }}{{ $href = . | relURL }}{{ $external = false }}{{ end }}
-    {{ $search := lower (printf "%s %s %s %s" .title .description .category (delimit (default (slice) .stack) " ")) }}
+    {{ $href := .url }}{{ $external := true }}{{ $stack := .stack }}
+    {{ with .page }}{{ $href = . | relURL }}{{ $external = false }}{{ with site.GetPage . }}{{ $stack = .Params.stack }}{{ end }}{{ end }}
+    {{ $search := lower (printf "%s %s %s %s" .title .description .category (delimit (default (slice) $stack) " ")) }}
     <a href="{{ $href }}"{{ if $external }} target="_blank"{{ end }} class="project-card group no-underline hover:no-underline reveal" data-proj data-category="{{ .category }}" data-search="{{ $search }}">
       <span class="text-xs text-blue-600 dark:text-blue-400 font-mono mb-2 block">{{ .category }}</span>
       <h3 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2 mt-0 leading-tight group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">{{ .title }}</h3>
       <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">{{ .description }}</p>
-      {{ with .stack }}
+      {{ with $stack }}
       <div class="flex flex-wrap gap-1.5 mt-3">{{ range . }}<span class="stack-badge">{{ . }}</span>{{ end }}</div>
       {{ end }}
     </a>

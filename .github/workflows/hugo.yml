@@ -47,14 +47,13 @@ jobs:
       - name: Install NPM dependencies
         run: "npm ci || npm install"
 
-      - name: Build with Hugo and Pagefind
+      - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
         run: |
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-          npx -y pagefind --site public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

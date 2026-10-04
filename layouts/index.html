@@ -76,8 +76,8 @@
             <div class="panel-inner">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {{ range sort (where .Site.Data.projects.list "featured" true) "featured_order" "asc" }}
-                {{ $href := .url }}{{ $external := true }}
-                {{ with .page }}{{ $href = . | relURL }}{{ $external = false }}{{ end }}
+                {{ $href := .url }}{{ $external := true }}{{ $stack := .stack }}
+                {{ with .page }}{{ $href = . | relURL }}{{ $external = false }}{{ with site.GetPage . }}{{ $stack = .Params.stack }}{{ end }}{{ end }}
                 <a href="{{ $href }}" {{ if $external }} target="_blank" {{ end }}
                   class="project-card group no-underline hover:no-underline">
                   <span class="text-xs text-blue-600 dark:text-blue-400 font-mono mb-2 block">{{ .category }}</span>
@@ -86,7 +86,7 @@
                     {{ .title }}</h3>
                   <p class="text-sm text-stone-500 dark:text-stone-400 leading-relaxed m-0 flex-grow">{{ .description }}
                   </p>
-                  {{ with .stack }}
+                  {{ with $stack }}
                   <div class="flex flex-wrap gap-1.5 mt-3">
                     {{ range . }}<span class="stack-badge">{{ . }}</span>{{ end }}
                   </div>

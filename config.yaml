@@ -5,8 +5,10 @@ build:
 title: Alvaro Martin Ruiz | Portfolio
 # Uncomment below to use aafu as hugo theme. See instructions in README.md
 theme: aafu
-ignoreFiles: ["markdown_syntax/.*", "post_3\\.md"]
+# Skip the theme's demo content (sample posts + Pagefind search page)
+ignoreFiles: ["markdown_syntax/.*", "post_3\\.md", "search/_index\\.md"]
 disableHugoGeneratorInject: true
+disableKinds: ["taxonomy", "term"]
 
 markup:
   goldmark:
@@ -39,9 +41,3 @@ params:
     mainTheme: dark
     showAttribute: true
     singlePage: false
-  accordion:
-    - item: about_me
-      expand: true 
-    - item: projects
-    - item: cv
-    - item: blog

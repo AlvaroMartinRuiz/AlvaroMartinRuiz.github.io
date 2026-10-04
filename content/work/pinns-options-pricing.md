@@ -28,3 +28,7 @@ Physics-Informed Neural Networks (PINNs) do exactly that — instead of fitting 
 - End-to-end implementation in TensorFlow, using automatic differentiation to compute the PDE residual.
 - Recovers the analytical Black–Scholes price for European calls and puts.
 - A theory-first bridge between deep learning and quantitative finance.
+
+## Thesis
+
+This project is the basis of my bachelor's thesis: [Local Volatility Surface Calibration and Barrier Option Pricing via Physics-Informed Deep Learning](/blog/pinns_local_volatility_thesis/).
